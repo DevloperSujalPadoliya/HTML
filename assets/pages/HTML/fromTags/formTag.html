@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FormTag in HTML</title>
+    </head>
+    <body>
+        
+        <!-- <h1>Student Addmission Form</h1> -->
+        <form>
+            <fieldset>
+                <legend><b>Admission Form</b></legend>
+            <!-- Form tags in html -->
+             <!-- personal information -->
+             <label>Enter student first name:</label>
+             <input type="text"> <br>
+             <br>
+
+             <label>Enter student last name:</label>
+             <input type="text"> <br>
+             <br>
+
+             <label>Enter your age</label>
+             <input type="number"> <br>
+             <br>
+             
+             <!-- <label>Enter your birth date</label>
+             <input type="date"><br>
+             <br> -->
+
+             <label>Enter your birth date</label>
+             <input type="datetime-local"><br>
+             <br>
+            <!-- contact information -->
+             <label>Enter youe Email</label>
+             <input type="email"> <br>
+             <br>
+
+             <label>Enter your Mobile number</label>
+             <input type="number"><br>
+             <br>
+
+             <label>Enter your Address</label>
+             <input type="text"> <br>
+             <br>
+
+             <!-- <label for="courses">select your course</label>
+             <select name="Cources" id="">
+                <option value="Paython">python</option>
+                <option value="Java">Java</option>
+                <option value="C">C</option>
+                <option value="Designing">Designing</option>
+ -->
+
+                <label for="courses">select your course</label>
+             <select name="Cources" id="">
+                <optgroup label="BackEnd">
+                <option value="Paython">python</option>
+                <option value="Java">Java</option>
+                <option value="C">C</option>
+             </optgroup>
+
+                <optgroup label="Frontend">
+                <option value="Designing">Designing</option>
+                <option value="Web layout">Web layout</option>
+                <option value="Javascript">Javascript</option>
+             </optgroup>
+
+                <optgroup label="Communication">
+                <option value="English">English</option>
+                <option value="Soft-skill">Soft-skill</option>
+                <option value="Interview -practice">Interview -practice</option>
+             </optgroup>
+             </select><br>
+             <br>
+
+             <label for="communication">Range your communication skills:</label>
+             <input type="range" name="communication" min="0" max="10" >
+
+
+             <!-- input type radio -->
+              <input type="radio" name="gender">
+              <label>male</label>
+              <input type="radio" name="gender">
+              <label>Female</label> <br>
+              <br>
+
+              <label><select hobbies:></label>
+                <input type="checkbox"><lebal>Reading</lebal>
+                <input type="checkbox"><lebal>writing</lebal>
+                <input type="checkbox"><lebal>playing</lebal>
+                <input type="checkbox"><lebal>swimming</lebal><br>
+                <br>
+
+                <input type="submit">
+            </fieldset>
+        </form>
+    </body>
+</html>
