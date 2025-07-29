@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Internal In Css</title>
+    <style>
+        .table-one{
+            border-collapse: collapse;
+            border-color: black;
+            border-width: 2px;
+            border-style: solid;
+            height: 300px;
+            width: 500px;
+        }
+        .box-one{
+            border-style: solid;
+            border-color: black;
+            border-width:2px;
+            width:50px;
+
+        }
+        .rows{
+            border-collapse: collapse;
+            border-color: black;
+            border-width: 2px;
+            border-style: solid;
+        }
+        .box-two{
+            border-style: solid;
+            border-color: black;
+            border-width:2px;
+            width: 50px;
+        }
+
+        .box-three{
+            border-style: solid;
+            border-color: black;
+            border-width:2px;
+            width: 50px;
+            
+            
+        }
+       
+    </style>
+</head>
+<body>
+    <table class="table-one">
+        <tr  class="rows">
+            <td class="box-one">1</td>
+            <td class="box-two">2</td>
+            <td class="box-three">3</td>
+        </tr>
+
+        <tr  class="rows">
+            <td class="box-two">4</td>
+            <td class="box-two">5</td>
+            <!-- <td class="box-three">6</td> -->
+        </tr>
+
+        <tr>
+            <td class="box-three">7</td>
+            <td class="box-two">8</td>
+            <!-- <td class="box-three">9</td> -->
+        </tr  class="rows">
+
+        <tr  class="rows">
+            <td class="box-four">10</td>
+            <td class="box-two">11</td>
+            <!-- <td class="box-three">12</td> -->
+        </tr>
+    </table>
+</body>
+</html>
