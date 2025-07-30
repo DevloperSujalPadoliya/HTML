@@ -2,42 +2,146 @@
 <html>
 
 <head>
-    <title>portfolio</title>
+    <title>FortFolio</title>
+    <style>
+        .table-one {
+            border-style: solid;
+            border-color: black;
+            border-width: 2px;
+            width: 100%;
+            height: 100%;
+            border-collapse: collapse;
+        }
+
+        .coloum-one {
+            border-style: solid;
+            border-color: black;
+            border-width: 2px;
+            /* width: 150px; */
+            height: 25px;
+            background-color: black;
+        }
+
+        .coloum-two {
+            border-style: solid;
+            border-color: black;
+            border-width: 2px;
+            background-color: red;
+
+
+        }
+
+        .coloum-three {
+            border-style: solid;
+            border-color: black;
+            border-width: 2px;
+            width: 100px;
+            /* border-: white; */
+            background-color: black;
+
+        }
+
+        .box-one {
+            border-style: solid;
+            border-color: black;
+            border-width: 2px;
+            height: 50px;
+            color: white;
+            background-color: black;
+            text-align: center;
+            border-right-color: black;
+        }
+
+        .box-one-two {
+            border-style: solid;
+            border-color: black;
+            border-width: 2px;
+            color: rgb(255, 255, 255);
+            border-right-color: white;
+            text-align: center;
+            background-color: black;
+
+        }
+
+        .box-two {
+            border-style: solid;
+            border-color: black;
+            border-width: 2px;
+            height: 400px;
+            text-align: center;
+            background-color: grey;
+            font-size:20px;
+        }
+
+        .box-three {
+            border-style: solid;
+            border-color: black;
+            border-width: 2px;
+            height: 300px;
+            text-align: center;
+            background-color: dimgray;
+            color: white;
+            font-size:20px;
+        }
+
+        .box-four {
+            border-style: solid;
+            border-color: black;
+            border-width: 2px;
+        }
+    </style>
 </head>
 
 <body>
-    <table style="border:black solid 4px; border-collapse: collapse; width:100% ;height: 100%;">
-        <th style="border:black solid 2px; margin-bottom:100px; background-color:red;">Menu</th>
-        <th style="border:black solid 2px; background-color:red">About</th>
-        <th style="border:black solid 2px; background-color:red">Project</th>
-        <th style="border:black solid 2px; background-color:red">Contact</th>
+    <table class="table-one">
+
+        <th class="coloum-one">1</th>
+        <th class="coloum-three" colspan="2">1</th>
+        <!-- <th class="coloum-one">1</th> -->
+        <th class="coloum-two">Home</th>
+        <th class="coloum-two"><a href="./About/About.html">About</a></th>
+        <th class="coloum-two"><a href="./project/Project.html">Project</a></th>
+        <th class="coloum-two"><a href="./contact/Contact.html">Contact</a></th>
 
         <tr>
-            <td style="border:black solid 2px; padding-bottom:50px; background-color: black;" colspan="4"> <img src="https://sdmntprwestus2.oaiusercontent.com/files/00000000-8f00-61f8-908c-65414456cf96/raw?se=2025-07-29T11%3A54%3A48Z&sp=r&sv=2024-08-04&sr=b&scid=9b6f9173-c197-573d-adef-50be82ee52ef&skoid=c953efd6-2ae8-41b4-a6d6-34b1475ac07c&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2025-07-29T08%3A39%3A49Z&ske=2025-07-30T08%3A39%3A49Z&sks=b&skv=2024-08-04&sig=l2wz4mVIp2O1KnrMX0f84okfSMlPDyMUK4QV5AgCa9E%3D" width="100px" height="100px"><p style="color:white; text-align: center; text-decoration: underline;" ><h1 style="color: white; text-align: center; text-decoration: underline;">MY PORTFOLIO</h1></p></td>
-            <!-- <td style="border:black solid 2px">1</td> -->
-            <!-- <td style="border:black solid 2px">1</td> -->
-            <!-- <td style="border:black solid 2px">1</td> -->
-        </tr>
-
-        <tr>
-            <td style="border:black solid 2px; padding-bottom:300px; background-color: black; padding-bottom: 10px; "colspan="4">
-                <p style="color: white; text-align: center; padding-top:150px;">Hi, I'M SUJAL . R . PADOLIYA
-                    FULL-STACK DEVELOPER
-                    I am preparing for full-stack devepment in my home town katol at ENJOY PROGRAMING
-                    "Bridging the gap between frontend
-                     beauty and backend power! Crafting seamless web experiences, one
-            line of code at a time.</p><br> <p style="color: white; text-align: center;">My Skills: <br> <br> HTML <br> <br>CSS <br> <br> JavaScript</p>
+            <td class="box-one" style="padding-right:1px;"><img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5O5jDQuGAf-xfLTrEJdhK8WiMjQy0_fiz9A&s"
+                    width="50px" height=50px></td>
+            <td class="box-one-two" colspan="6">
+                <p>Portfolio</p>
             </td>
-            <!-- <td style="border:black solid 2px">2</td> -->
-            <!-- <td style="border:black solid 2px">3</td> -->
-            <!-- <td style="border:black solid 2px">4</td> -->
+            <!-- <td class="box-one">1</td> -->
+            <!-- <td class="box-one">1</td> -->
+            <!-- <td class="box-one">1</td> -->
+            <!-- <td class="box-one">1</td> -->
+            <!-- <td class="box-one">1</two -->
         </tr>
 
         <tr>
-        <td style="border:black solid 2px; padding-bottom:300px; background-color: gray; padding-bottom: 50px;" colspan="4"><p style="color: white; text-align: center;">MY Projects: </p><p style="color: rgb(0, 0, 0); text-align: center;" <br>01.Text Formating <br> <br> 02.List Tag <br> <br> 03.Multimedia Tag <br> <br> 04.Anchor Tag <br> <br> 05.Heyperlink Tag</p></td>
-        <!-- <td style="border:black solid 2px">2</td> -->
-        <!-- <td style="border:black solid 2px">3</td> -->
-        <!-- <td style="border:black solid 2px">4</td> -->
+            <td class="box-two" colspan="7">Hi, I'M SUJAL . R . PADOLIYA
+                FULL-STACK DEVELOPER
+                I am preparing for full-stack devepment in my home town katol at ENJOY PROGRAMING
+                "Bridging the gap between frontend beauty and backend power! Crafting seamless web experiences, one line
+                of code at a time.</td>
+            <!-- <td class="box-two">2</td> -->
+            <!-- <td class="box-two">2</td> -->
+            <!-- <td class="box-two">2</td> -->
+            <!-- <td class="box-two">2</td> -->
+            <!-- <td class="box-two">2</td> -->
+            <!-- <td class="box-two">2</td> -->
+        </tr>
+
+        <tr>
+            <td class="box-three" colspan="7"><p style="margin-bottom:50px; margin-top:50px;">MY CLASS</p> <br><iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1473.8840841639033!2d78.58350891713067!3d21.276585805152845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd457558b6f564f%3A0x948c192f86a29d0f!2sEnjoy%20Programming!5e1!3m2!1sen!2sin!4v1753872189188!5m2!1sen!2sin"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe> <br><br>MY Skills: <br> <br>HTML <br><br>CSS <br><br>JavaScript <br> <br></td>
+            <!-- <td class="box-three">3</td> -->
+            <!-- <td class="box-three">3</td> -->
+            <!-- <td class="box-three">3</td> -->
+            <!-- <td class="box-three">3</td> -->
+            <!-- <td class="box-three">3</td> -->
+            <!-- <td class="box-three">3</td> -->
         </tr>
     </table>
 </body>
