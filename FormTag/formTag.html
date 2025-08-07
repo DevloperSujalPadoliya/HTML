@@ -1,42 +1,103 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Form Tag</title>
+    <title>Form tag</title>
+    <style>
+
+        .table-one{
+            border-style: solid;
+            border-width:2px;
+            border-collapse: collapse;
+            width:100%;
+            height:100vw;
+        }
+
+        .colomn-one{
+            border-style: solid;
+            border-width:2px;
+            border-collapse: collapse;
+            width:100vw;
+            height:100vw;
+        }
+
+        .box-one{
+            border-style: solid;
+            border-width:2px;
+            border-collapse: collapse;
+        }
+
+        
+    </style>
 </head>
-
 <body>
-    <form action="./personal-details.html">
-    <fieldset>
-       
-        <legend>
-            <h1>Bank Account Opening Form 🏦</h1>
-        </legend>
+    <table>
+        <form action="">
+            
+        <th class="colomn-one">
+            <h1 style="text-align: center;">Student Registration Form</h1>
+        <fieldset>
+            <label>First Name :</label>
+            <input type="text"> <br>
+            <br>
 
-        <label><b>Branch Name:𓆱</b></label>
-        <input type="texy" required><br>
-        <br>
+            <label>Last Name :</label>
+            <input type="text"><br>
+            <br>
 
-        <label><b>Account Type:👤💳💰</b></label>
-        <label]>Normal</label>
-            <input type="radio" name="Account Type">
-            <label]>Small</label>
-                <input type="radio" name="Account Type">
-                <label]>Minor</label>
-                    <input type="radio" name="Account Type"><br>
-                    <br>
+            <label">Date of birth</label>
+            <input type="date"><br>
+            <br>
 
-                    <label><b>Application Type:</b></label>
-                    <label>New</label>
-                    <input type="radio" name="Application Type">
-                    <label>update</label>
-                    <input type="radio" name="Application Type"><br>
-                    <br>
+            <label">Email Id : </label>
+            <input type="email"><br>
+            <br>
 
-                    <button type="submit">next➡️</button>
-    </fieldset>
+            <label">Mobile Number : </label>
+            <input type="number"><br>
+            <br>
+
+            <Label>Gender   :</Label>
+            <label">Male</label>
+            <input type="radio" name="Gender">
+            <label">Female</label>
+            <input type="radio" name="Gender"><br>
+            <br>
+
+            <label">Address</label>
+            <input type="text"><br>
+            <br>
+
+            <label">City</label>
+            <input type="text"><br>
+            <br>
+
+            <label">Pin Code : </label>
+            <input type="number"><br>
+            <br>
+
+            <label>State</label>
+            <input type="text"><br>
+            <br>
+
+            <label>Hoobies :</label>
+            <input type="checkbox"><label">Coding</label>
+            <input type="checkbox"><label">Reading</label>
+            <input type="checkbox"><label">Gaming</label>
+            <input type="checkbox"><label">Out door games</label>
+            <br>
+            <br>
+
+            <label for="Country">Country</label>
+            <select name="India" id="">
+                <optgroup>
+                    <option value="India">India</option>
+                </optgroup><br>
+                <br>
+                
+                <th class="box-one">1</th>
+        </th>
+        </fieldset>
     </form>
-    
+    </table>
 </body>
-
 </html>
