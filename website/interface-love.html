@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: open sans;
+        }
+
+        .main-container {
+            background-color: aqua;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .div-one {
+            background-color: white;
+            width: 100vw;
+            height: 10vh;
+            color: black;
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+        }
+
+        .home-b {
+            background-color: white;
+            width: 8vw;
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+        }
+
+        .button-1 {
+            background-color: white;
+            width: 20vw;
+            height: 5vh;
+            display: flex;
+            justify-content: center;
+            border-radius: 50px;
+            margin-right: 650px;
+            margin-top: 10px;
+        }
+
+        .div-two {
+            background-color: rgb(181, 180, 180);
+            width: 100vw;
+            height: 87%;
+            display: flex;
+            font-size: 140px;
+
+        }
+
+        .image-1 {
+            background-color: lightgray;
+            width: 40vw;
+            height: 88.7%;
+            position: absolute;
+            left: 880px;
+        }
+
+        .para-1 {
+            background-color: white;
+            width: 30vw;
+            height: 30vh;
+            position: relative;
+            top: 470px;
+            right: 720px;
+            font-size: 20px;
+        }
+
+        .div-three {
+            background-color: red;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .line-1 {
+            background-color: white;
+            color: black;
+            width: 100vw;
+            height: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .boxes-1 {
+            background-color: white;
+            width: 100vw;
+            height: 80%;
+            display: flex;
+            flex-direction: row;
+            /* align-items: center ; */
+            justify-content: space-evenly;
+
+
+        }
+
+        .box-1 {
+            background-color: green;
+            width: 15vw;
+            height: 45vh;
+        }
+
+        .div-four {
+            background-color: white;
+            width: 100vw;
+            height: 70vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .image-2 {
+            background-color: red;
+            width: 30.33vw;
+            height: 70vh;
+            display: flex;
+
+        }
+
+        .div-five {
+            background-color: orange;
+            width: 100vw;
+            height: 190vh;
+            display: flex;
+            flex-direction: column;
+
+
+
+        }
+
+        .box-2 {
+            background-color: rebeccapurple;
+            width: 60%;
+            height: 80%;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .big-box {
+            background-color: white;
+            width: 100%;
+            height: 80%;
+            display: flex;
+            padding-left: 20px;
+
+        }
+
+        .text-1 {
+            background-color: red;
+            width: 40%;
+            height: 100%;
+
+        }
+
+        .text-2 {
+            background-color: #a37940;
+            width: 100%;
+            height: 30%;
+            text-align: center;
+            font-size: 110px;
+        }
+
+        .text-3 {
+            background-color: #a37940;
+            width: 100%;
+            height: 3%;
+            font-size: 13px;
+            text-align: center;
+        }
+
+        .image-3 {
+            background-color: green;
+            width: 60%;
+            height: 100%;
+        }
+
+        .boxes-2 {
+            background-color: blue;
+            width: 40%;
+            height: 80%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+
+
+        }
+
+        .image-4 {
+            background-color: darkorchid;
+            width: 40%;
+            height: 50%;
+        }
+
+        .small-1 {
+            background-color: white;
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: space-evenly;
+
+        }
+
+        .small-2 {
+            background-color: white;
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .line-2 {
+            background-color: black;
+            width: 0%;
+            height: 95%;
+            border: solid;
+        }
+
+        .line-1-1 {
+            background-color: #a37940;
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .para-2 {
+            background-color: #a37940;
+            width: 100%;
+            height: 17%;
+            text-align: center;
+        }
+
+        /* six div */
+
+        .div-six {
+            background-color: white;
+            width: 100vw;
+            height: 700px;
+            padding-left: 20px;
+
+        }
+
+        .table-one {
+            width: 100%;
+            height: 70%;
+            border: solid;
+            border-width: 1px;
+            border-collapse: collapse;
+        }
+
+        .heading-one {
+            width: 16.66%;
+            height: 35%;
+            border: solid;
+            border-width: 1px;
+            text-align: center;
+        }
+
+        .table-data {
+
+            border: solid;
+            border-width: 1px;
+            text-align: center;
+        }
+
+        .image-4:hover {
+            background-color: grey;
+            opacity: 0.5;
+        }
+
+        /* div seven  */
+
+        .div-seven {
+            background-color: lightgreen;
+            width: 100vw;
+            height: 200vh;
+        }
+
+        .small-3 {
+            background-color: red;
+            width: 100%;
+            height: 100%;
+
+        }
+
+        .line-3 {
+            background-color: white;
+            width: 100%;
+            height: 5%;
+            text-align: center;
+        }
+
+        .box-3 {
+            background-color: white;
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .box-4 {
+            background-color: white;
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .boxes-3{
+            background-color: red;
+            width: 18%;
+            height: 50%;
+
+        }
+
+        .boxes-4{
+            background-color: green;
+            width: 18%;
+            height: 30%;
+
+        }
+
+        .boxes-5{
+            background-color: red;
+            width:18%;
+            height:50%;
+        }
+
+        .boxes-6{
+            background-color: red;
+            width:18%;
+            height:30%;
+        }
+
+        .div-eight{
+            background-color: red;
+            width: 100vw;
+            height: 100vh;
+
+        }
+
+        .box-5{
+            background-color: white;
+            width: 100%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .box-6{
+            background-color: lightgray;
+            width: 100%;
+            height: 50%;
+            display: flex;
+            align-content:first baseline;
+        }
+
+        .boxes-7{
+            background-color: black;
+            width:70%;
+            height: 100%;
+            display: flex;
+            justify-content:space-evenly;
+        }
+
+        .boxes-8{
+            background-color: black;
+            width:30%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+        }
+
+        .small-4{
+            background-color: black;
+            width: 19.5%;
+            height: 100%;
+            color: white;
+        }
+
+       .large-text{
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        color: white;
+        font-size: 350px;
+        text-align: center;
+       }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="div-one">
+            <div class="button-1"><button
+                    style="border-radius: 50px; padding-right: 30px; background-color: black; color: white;">Lovers
+                    Magazine</button></div>
+            <div class="home-b">Home</div>
+            <div class="home-b">interview</div>
+            <div class="home-b">Mixes</div>
+            <div class="home-b">🔍</div>
+        </div>
+        <div class="div-two"><span style="margin-left: 30px; margin-top: 50px;">BRENNAN <br> MCGRATH</span>
+            <div class="image-1"><img
+                    src="https://spaces.is/media/pages/loversmagazine/interviews/brennan-mcgrath/8a82b0dd01-1751989842/combo-headshots_0618250275-1-1146x1604.4-crop-q90.webp"
+                    alt="" width="100%" height="100%"></div>
+            <div class="para-1">
+                <p style="margin-left: 50px;">Brennan McGrath is a Partner at <br>Combo, an independent strategy,
+                    <br>design, and creative office in New <br>York City. <br> <br>No. 609________________ Read
+                    interview
+                </p>
+            </div>
+        </div>
+        <div class="div-three">
+            <div class="line-1">Recent Interviews
+                ______________________________________________________________________________________________________________________________________________________________
+            </div>
+            <div class="boxes-1">
+                <div class="box-1"><img
+                        src="https://spaces.is/media/pages/loversmagazine/interviews/julian-herbst/827399e440-1754692532/me_full-366x549-crop-q90.webp"
+                        alt="" width="100%" height="100%">Product Designer <br><br><b>Julian Herbst--Attio</b>
+                    <br><br>Julian Herbst is a German product designer creating digital experiences and brand identities
+                    for startups and wide …
+                </div>
+                <div class="box-1"><img
+                        src="https://spaces.is/media/pages/loversmagazine/interviews/alex-khomutov/a90f10c547-1749600107/img_3240-366x549-crop-q90.webp"
+                        width="100%" height="100%" alt="">Product Designer <br><br> <b>Alex Khomutov</b>he/him <b>--Ford
+                        Motor Company</b> <br> <br>Alex Khomutov is a Ukrainian Digital Product Designer currently
+                    living in Los Angeles and designing the future of …</div>
+                <div class="box-1"><img
+                        src="https://spaces.is/media/pages/loversmagazine/interviews/rauno-freiberg/c2daab0494-1751662321/rauno2-366x549-crop-48-6-39-2-q90.webp"
+                        alt="" width="100%" height="100%">Product Engineer <br><br><b>Rauno Freiberg - Vercel</b> <br>
+                    <br>Rauno Freiberg is an Estonian interaction designer. He currently works as a Staff Design
+                    Engineer at Vercel and was …
+                </div>
+                <div class="box-1"><img
+                        src="https://spaces.is/media/pages/loversmagazine/interviews/amelie-schluter/bd528b6d74-1751632298/2025-amelie-profile-closeup_v2-366x549-crop-q90.webp"
+                        alt="" width="100%" height="100%">Founder <br><br><b>Amelie Schlüter -
+                        SPACING</b><br><br>Co-Founder of SPACING – a design venture studio creating a family of
+                    delightful AI software products and partnering …</div>
+                <div class="box-1"><img
+                        src="https://spaces.is/media/pages/loversmagazine/interviews/benoit-lemoine/f104a690ab-1746402801/benoit-lemoine-area17-366x549-crop-49-6-34-9-q90.webp"
+                        alt="" width="100%" height="100%">Design Director <br><br><b>Benoit Lemoine - AREA</b>
+                    <br><br>Benoit Lemoine is the Group Design Director at AREA 17 in New York. Over the course of his
+                    career, he has led …
+                </div>
+            </div>
+        </div>
+        <div class="div-four">
+            <div class="image-2"><img
+                    src="https://spaces.is/media/pages/loversmagazine/79b0b07b3e-1723031519/scout-712x890-crop-q90.webp"
+                    alt="" width="100%" height="100%"></div>
+            <div class="image-2"><img
+                    src="https://spaces.is/media/pages/loversmagazine/8e1caa771f-1723031652/culture-ad-712x890-crop-q90.webp"
+                    alt="" width="100%" height="100%"></div>
+            <div class="image-2"><img
+                    src="https://spaces.is/media/pages/loversmagazine/3a15143e02-1723031724/studios-ad-712x890-crop-q90.webp"
+                    alt="" width="100%" height="100%"></div>
+        </div>
+
+        <!-- fifth side -->
+        <div class="div-five">
+            <div class="line-1">Recent Interviews
+                ______________________________________________________________________________________________________________________________________________________________
+            </div>
+            <div class="big-box">
+                <div class="box-2">
+                    <div class="text-1">
+                        <div class="text-2">RYAN <br> FAN</div>
+                        <div class="text-3">PRODUCT DESIGNER AT CODE AND THEORY</div>
+                        <div class="line-1-1">
+                            <div class="line-2"></div>
+                        </div>
+                        <div class="para-2">Ryan Fan is a New York-based product designer and developer helping humans
+                            understand machines better. He currently designs at Code and Theory, and supports the design
+                            community as an Awwwards jury and AIGA NY mentor.</div>
+                    </div>
+
+                    <!-- this is div image-3 -->
+                    <div class="image-3"><img
+                            src="https://spaces.is/media/pages/loversmagazine/interviews/ryan-fan/de4e2c0830-1741470772/headshot-4x5-764x1528-crop-q90.webp"
+                            width="100%" height="100%" alt=""></div>
+                </div>
+                <div class="boxes-2">
+                    <div class="small-1">
+                        <div class="image-4"><img
+                                src="https://spaces.is/media/pages/loversmagazine/interviews/ethan-chng/07e033d0d2-1745259721/portrait_main-366x366-crop-q90.webp"
+                                alt="" width="100%" height="100%"><span>PRODUCT DESIGNER</span> <br> <b>Ethan Chng -
+                                Instagram</b> <br><br>
+                            <p>Ethan Chng is a designer at Instagram focused on systems and interactions. He enjoys
+                                dreaming up ideas that solve ...</p>
+                        </div>
+                        <div class="image-4"><img
+                                src="https://spaces.is/media/pages/loversmagazine/interviews/andrea-pacheco/229c4fbb03-1746055185/dedeialn-366x366-crop-q90.webp"
+                                alt="" width="100%" height="100%">PRODUCT DESIGNER <br> <b>Andrea Pacheco</b>She/Her(s)
+                            <br> <b>- Instagram</b><br><br>
+                            <p>Andrea Pacheco is a product designer passionate about building the future of social
+                                connection. With a background in ...</p>
+                        </div>
+                    </div>
+                    <div class="small-2">
+                        <div class="image-4"><img
+                                src="https://spaces.is/media/pages/loversmagazine/interviews/andrey-rybin/30d46e50c3-1743313008/img_9639-kopija-366x366-crop-42-2-17-5-q90.webp"
+                                alt="" width="100%" height="100%">PRODUCT DESIGNER <br> <b>Andrey Rybin - Human</b> <br>
+                            <br>
+                            <p>Andrei Rybin is a Product and Industrial Designer, born in Lipetsk and based in Yerevan,
+                                with a focus on minimalism and ...</p>
+                        </div>
+                        <div class="image-4"><img
+                                src="https://spaces.is/media/pages/loversmagazine/interviews/barbara-lopez/7a3e970d3e-1743785370/barbara-366x366-crop-q90.webp"
+                                alt="" width="100%" height="100%">PRODUCT DESIGNER <br> <b>Barbara Lopez</b>She / Her
+                            <b>-Squarespace</b> <br> <br>
+                            <p>Barbara is a Venezuelan Product Designer based in New York, currently working on the
+                                Frontsite team at Squarespace.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        <!-- six div -->
+        <div class="div-six">
+            <table class="table-one">
+
+                <th class="heading-one" rowspan="2" colspan="2" style="font-size: 50px;">Mixes put <br>together <br>by
+                    your <br>favourite <br>designers.</th>
+                <!-- <th class="heading-one"></th> -->
+                <th class="heading-one">DESIGNER MIX #609 <img
+                        src="https://spaces.is/media/pages/loversmagazine/interviews/brennan-mcgrath/6a5a7d204e-1754768360/603.brennan-mcgrath-350x350-crop-q90.webp"
+                        alt="" width="85%" height="70%">Brennan McGrath</th>
+                <th class="heading-one">DESIGNER MIX #608 <img
+                        src="https://spaces.is/media/pages/loversmagazine/interviews/julian-herbst/3e2dab1186-1754691522/602.julian-herbst-350x350-crop-q90.webp"
+                        alt="" width="85%" height="70%">Julian Herbst</th>
+                <th class="heading-one">DESIGNER MIX #607 <img
+                        src="https://spaces.is/media/pages/loversmagazine/interviews/alex-khomutov/1f14139277-1752068464/601.alex-khomutov-350x350-crop-q90.webp"
+                        alt="" width="88%" height="70%">Alex Khomutov</th>
+                <th class="heading-one">DESIGNER MIX #606 <img
+                        src="https://spaces.is/media/pages/loversmagazine/interviews/rauno-freiberg/1b0fc4b625-1751999529/600.rauno-freiberg-350x350-crop-q90.webp"
+                        alt="" width="88%" height="60%">Rauno Freiberg</th>
+
+                <tr>
+                    <!-- <td class="table-data"></td> -->
+                    <!-- <td class="table-data"></td> -->
+                    <td class="table-data">DESIGNER MIX #605 <img
+                            src="https://spaces.is/media/pages/loversmagazine/interviews/amelie-schluter/09648cc77d-1751632350/599.amelie-schluter-350x350-crop-q90.webp"
+                            alt="" width="88%" height="70%">Amelie Schlüter</td>
+                    <td class="table-data">DESIGNER MIX #604 <img
+                            src="https://spaces.is/media/pages/loversmagazine/interviews/benoit-lemoine/ed9bd97e1e-1751625163/598.benoit-lemoine-350x350-crop-q90.webp"
+                            alt="" width="88%" height="70%">Benoit Lemoine</td>
+                    <td class="table-data">DESIGNER MIX #603 <img
+                            src="https://spaces.is/media/pages/loversmagazine/interviews/ryan-fan/b1672c8ed8-1751479789/147192368864-350x350-crop-q90.webp"
+                            alt="" width="88%" height="70%">Ryan Fan</td>
+                    <td class="table-data">DESIGNER MIX #602 <img
+                            src="https://spaces.is/media/pages/loversmagazine/interviews/sergey-lisovskiy/6c095c4e7d-1749207122/597.sergey-lisovskiy-350x350-crop-q90.webp"
+                            alt="" width="88%" height="70%">Sergey Lisovskiy</td>
+                </tr>
+            </table>
+        </div>
+        <div class="div-seven">
+            <div class="line-3">Popular Interviews
+                ______________________________________________________________________________________________________________________________________________________________
+            </div>
+            <div class="small-3">
+                <div class="box-3">
+                    <div class="boxes-3"><img src="https://spaces.is/media/pages/loversmagazine/interviews/andrea-mata/50f3d8d63b-1704123838/andrea-mata-photo-366x549-crop-x-0-5-y-0-5-q90.webp" alt="" width="100%" height="100%"> PRODUCT DESIGNER <br><br><b>Andrea Mata - Ueno</b> <br><br> <p>Designer based in San Francisco.
+                        Specialized in digital design with roots in editorial and graphic design. She loves...</p></div>
+                    <div class="boxes-4"><img src="https://spaces.is/media/pages/loversmagazine/interviews/jason-jun/d0e8dcdad7-1704123840/jason-jun-366x366-crop-x-0-5-y-0-5-q90.webp" alt="" width="100%" height="100%">PRODUCT DESIGNER <br><br> <b>Jason Jun - Envato</b><br><br> <p>South Korean-born designer based in Melbourne, Australia. Currently works at Envato as a Ul designer.</p></div>
+                    <div class="boxes-3"><img src="https://spaces.is/media/pages/loversmagazine/interviews/aaina-sharma/f88128ee8b-1704123840/aaina-sharma-366x549-crop-x-0-5-y-0-5-q90.webp" alt="" width="100%" height="100%">PRODUCT DESIGNER <br><br> <b>Aaina Sharma - Unmind</b> <br><br> <p>Aaina is a product designer based in London via San Francisco, currently heading up design at Unmind. Her passion lies...</p></div>
+                    <div class="boxes-3"><img src="https://spaces.is/media/pages/loversmagazine/interviews/fabricio-rosa-marques/fb07fd6c20-1704123838/fabricio-rosa-marques-366x549-crop-x-0-5-y-0-5-q90.webp" alt="" width="100%" height="100%">PRODUCT DESIGNER <br><br> <b>Fabricio Rosa Marques -Pitch</b> <br><br> <p>Berlin-based product designer, illustrator and tinkerer at heart. He loves to create delightful and sophisticated...</p></div>
+                    <div class="boxes-3"><img src="https://spaces.is/media/pages/loversmagazine/interviews/sarah-dejager/f9a4ea9e13-1704123854/sarah-dejager-366x549-crop-q90.webp" alt="" width="100%" height="100%">DIGITAL DESIGNER <br><br> <b>Sarah de Jager - Verve</b> <br><br> <p>Always taking on the challenge to bridge the gap between branding and digital. Her signature? Bold and creative digital...</p></div>
+                </div>
+                <div class="box-4">
+                    <div class="boxes-6"><img src="https://spaces.is/media/pages/loversmagazine/interviews/diego-mendes/89a27bb277-1704123842/diego-mendes-366x366-crop-q90.webp" alt="" width="100%" height="100%">PRODUCT DESIGNER <br><br> <b>Diego Mendes - Facebook</b> <br><br> <p>Diego is a Brazilian product design manager on the AR/VR team at Facebook. He previously worked on the Stories team,...</p></div>
+                    <div class="boxes-6"><img src="https://spaces.is/media/pages/loversmagazine/interviews/min-sang-choi/a11df1aa99-1704123840/min-sang-choi-366x366-crop-x-0-5-y-0-5-q90.webp" alt="" width="100%" height="100%">PRODUCT DESIGNER <br><br><b>Min-sang Choi - Google</b> <br><br><p>Interaction designer based in Tokyo, focusing on Search Journey in Google iOS App. Previously worked on Google...</p></div>
+                    <div class="boxes-5"><img src="https://spaces.is/media/pages/loversmagazine/interviews/aadarsh-santosh/239656552c-1718388810/aadarsh-santosh-personal-photo-366x549-crop-q90.webp" alt="" width="100%" height="100%">GRAPHIC DESIGNER <br><br> <b>Aadarsh Santosh -Son&Sons</b><br><br> <p>Aadarsh is a designer based in Atlanta. Raised in Dubai he graduated as a graphic designer from SCAD Atlanta in 2021,....</p></div>
+                    <div class="boxes-5"><img src="https://spaces.is/media/pages/loversmagazine/interviews/aaron-aalto/1c9a143f51-1704123844/aaron-aalto-366x549-crop-q90.webp" alt="" width="100%" height="100%">PRODUCT DESIGNER <br><br> <b>Aaron Aalto - Freelance</b><br><br> <p>The big thinking in the tiny things..
+                        The story-driven thinking. The thinking that causes tension, breaks rules, and...</p></div>
+                    <div class="boxes-5"><img src="https://spaces.is/media/pages/loversmagazine/interviews/geof-crowl/74dfd2e2aa-1704123839/geof-2-366x549-crop-x-0-5-y-0-5-q90.webp" alt="" width="100%" height="100%">PRODUCT DESIGNER <br><br> <b>Geof Crowl - Freelance</b> <br><br> <p>Freelance interactive designer living in Salt Lake City, Utah that likes to make nice native apps and websites.</p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="div-eight">
+            <div class="box-5">
+                <div class="boxes-7">
+                    <div class="small-4"><span>COMPANY</span> <br><br><p>Home <br> About</p></div>
+                    <div class="small-4"><span>ECOSYSTEM</span> <br><br><p>Culture <br> Lovers Magazine <br>Scout <br>Studios</p></div>
+                    <div class="small-4"><span>CONNECT</span> <br><br><p>Email <br>Instagram <br>X/Twitter</p></div>
+                    <div class="small-4"><span>LEGAL</span> <br><br><p>Privacy <br>Terms </p></div>
+                </div>
+                <div class="boxes-8"><span>SUBSCRIBE</span><br><br><h1 style="font-size: 40px;">Keep your finger on the pulse.</h1> <br><p>A newsletter to uncover bright opportunities, connect with standout creatives, and explore stories shaping culture, design, and tech.</p>
+                <br><button class="button-2">Subscribe to Pulse</button></div>
+
+            </div>
+            <div class="box-6">
+                <div class="large-text">SPACES</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
