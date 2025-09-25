@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout 1</title>
+    <style>
+        .main-container{
+            background-color: lightgreen;
+            width: 100vw;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 100px 100px 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            padding: 100px;
+            
+
+        }
+
+        .box{
+            background-color:chartreuse;
+            width: 100px;
+            height: 100px;
+            border: solid 4px ;
+
+        }
+
+        .box-1{
+            background-color: lightcoral;
+            grid-row: span 2;
+            height: 200px;
+        }
+        .box-2{
+            background-color:black;
+         
+        }
+        .box-3{
+            background-color: blue;
+            grid-column: span 2;
+            width: 200px;
+        }
+
+        .box-4{
+            background-color: red;
+            grid-column: span 2;
+            width: 200px;
+        }
+
+        .box-5{
+            background-color:brown;
+            grid-row: span 2;
+            height: 200px;
+        }
+
+        .box-6{
+            background-color: lightsalmon;
+            grid-column: span 2;
+            grid-row: span 2;
+            height: 200px;
+            width: 200px;
+        }
+
+        .box-7{
+            background-color: aqua;
+            grid-row: span 2;
+            height: 200px;
+        }
+
+        .box-8{
+            background-color: lightslategrey;
+            grid-row: span 2;
+            height: 200px;
+        }
+
+        .box-9{
+            background-color: lightyellow;
+            grid-column: span 2;
+            width: 200px;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="box box-1">1</div>
+        <div class="box box-3">2</div>
+        <div class="box box-4">3</div>
+        <div class="box box-5">4</div>
+        <div class="box box-6">5</div>
+        <div class="box box-7">6</div>
+        <div class="box box-8">7</div>
+        <div class="box box-9">8</div>
+        <div class="box box-2">9</div>
+        <div class="box">10</div>
+        <!-- <div class="box">11</div> -->
+        <!-- <div class="box">12</div> -->
+        <!-- <div class="box">13</div> -->
+        <!-- <div class="box">14</div>
+        <div class="box">15</div>
+        <div class="box">16</div>
+        <div class="box">17</div> -->
+        <!-- <div class="box">18</div> -->
+        <!-- <div class="box">19</div> -->
+        <!-- <div class="box">20</div> -->
+
+    </div>
+</body>
+</html>

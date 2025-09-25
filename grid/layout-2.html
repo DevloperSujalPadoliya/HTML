@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Grid layout 2 </title>
+    <style>
+        .main-container{
+            background-color: lightgrey;
+            width: 100vw;
+            height: 100vh;
+            padding: 100px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px 100px;
+        }
+
+        .box{
+            background-color: brown;
+            width: 100px;
+            height: 100px;
+            border: solid 2px;
+        }
+
+        .box-1{
+            background-color: lightgreen;
+            grid-column: span 2;
+            width: 200px;
+            
+        }
+
+        .box-2{
+            background-color: blue;
+            grid-column: span 2;
+            width: 200px;
+            grid-row: span 4;
+            height: 400px;
+        }
+
+        .box-3{
+            background-color:rgb(255, 0, 230);
+            grid-column: span 2;
+            width: 200px;
+        }
+
+        .box-4{
+            background-color: grey;
+            grid-row: span 2;
+            height: 200px;
+            grid-column: span 2;
+            width: 200px;
+        }
+
+        .box-5{
+            background-color: lightblue;
+            grid-column: span 2;
+            width: 200px;
+        }
+
+        .box-6{
+            background-color: coral;
+            grid-column: span 4;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <div class="box box-1">1</div>
+        <div class="box box-1">2</div>
+        <div class="box box-2">3</div>
+        <div class="box box-3">4</div>
+        <div class="box box-4">5</div>
+        <div class="box box-5">6</div>
+        <div class="box box-6">7</div>
+       
+    </div>
+</body>
+</html>
