@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <style>
+        .main-container {
+            background-color: white;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .header {
+            background-color: white;
+            width: 100%;
+            height: 10%;
+            display: flex;
+            position: fixed;
+        }
+
+        .sujal {
+            background-color: whitesmoke;
+            width: 50%;
+            height: 100%;
+            align-content: center;
+            padding-left: 50px;
+            font-size: 30px;
+        }
+
+        .home {
+            background-color: whitesmoke;
+            width: 10%;
+            height: 100%;
+            text-align: center;
+            align-content: center;
+            font-size: 20px;
+        }
+
+        .About {
+            background-color: white;
+            width: 50%;
+            height: 40%;
+            position: relative;
+            top: 150px;
+            margin-left: 50px;
+            /* left: 4%; */
+        }
+
+        .box-1 {
+            background-color: white;
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+
+        .trasform {
+            background-color: white;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .square {
+            width: 70%;
+            height: 60%;
+            background-color: lightgray;
+            transform: skew(20deg);
+            box-shadow: 1px 2px 30px 10px #000000;
+        }
+
+        .circle {
+            background-color: skyblue;
+            width: 25%;
+            height: 44%;
+            border-radius: 200px;
+            position: absolute;
+            right: 125px;
+        }
+
+        .div-1 {
+            background-color: red;
+            width: 100vw;
+            height: 110vh;
+            display: flex;
+        }
+
+        .box-2 {
+            background-color: whitesmoke;
+            width: 30%;
+            height: 100%;
+            display: flex;
+            justify-content: end;
+            /* align-items: center; */
+
+        }
+
+        .box-3 {
+            background-color: whitesmoke;
+            width: 70%;
+            height: 100%;
+            /* padding-top: 100px; */
+
+
+        }
+
+
+
+        .image {
+            background-color: black;
+            width: 70%;
+            height: 90%;
+            border-radius: 20px;
+        }
+
+        .small {
+            background-color: whitesmoke;
+            width: 100%;
+            height: 10%;
+
+        }
+
+        .small-1 {
+            background-color: whitesmoke;
+            width: 95%;
+            height: 90%;
+            position: relative;
+            left: 5%;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        .div-2 {
+            background-color: yellow;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .skill {
+            background-color: white;
+            width: 100%;
+            height: 10%;
+            text-align: center;
+            font-size: 40px;
+        }
+
+        .boxes {
+            background-color: white;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .skills {
+            background-color: black;
+            width: 13.66%;
+            height: 30.33%;
+            border-radius: 20px;
+            box-shadow: 1px 2px 30px 10px #000000;
+            justify-content: center;
+            display: flex;
+            /* align-items: start; */
+        }
+
+        .skills2 {
+            background-color: black;
+            width: 13.66%;
+            height: 30.33%;
+            border-radius: 20px;
+            box-shadow: 1px 2px 30px 10px #808080;
+            justify-content: center;
+            display: flex;
+            align-items: start;
+        }
+
+        .skills3 {
+            background-color: black;
+            width: 13.66%;
+            height: 30.33%;
+            border-radius: 20px;
+            box-shadow: 1px 2px 30px 10px #808080;
+            justify-content: center;
+            display: flex;
+            align-items: start;
+        }
+
+        .div-3 {
+            background-color: crimson;
+            width: 100vw;
+            height: 100vh;
+
+        }
+
+        .project {
+            background-color: whitesmoke;
+            width: 100%;
+            height: 10%;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .boxes-1 {
+            background-color: whitesmoke;
+            width: 100%;
+            height: 90%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        .box-5 {
+            background-color: darkslategrey;
+            width: 25.33%;
+            height: 50%;
+            border-radius: 20px;
+            box-shadow: 1px 2px 30px 10px #808080;
+        }
+
+        .i-do{
+            background-color: red;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .header-1{
+            background-color: white;
+            width: 100%;
+            height: 10%;
+            text-align: center;
+            font-size: 40px;
+
+        }
+
+        .what-i{
+            background-color: white;
+            width: 100%;
+            height: 90%;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+
+        }
+
+        .doo{
+            background-color: black;
+            width: 25%;
+            height: 80%;
+            border-radius: 20px;
+        }
+
+        .contact{
+            background-color: whitesmoke;
+            width: 100vw;
+            height: 50vh;
+            color: black;
+            text-align: center;
+
+        }
+
+        .links{
+            background-color: whitesmoke;
+            width: 100%;
+            height: 60%;
+        }
+
+        .links-1{
+            background-color: whitesmoke;
+            width: 100%;
+            height: 12%;
+        }
+
+        a{
+            text-decoration: none;
+            color: black;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+        @media only screen and (max-width:477px){
+            .home{
+                font-size: 10px;
+                text-align: left;
+            }
+
+           
+            .circle{
+                width: 56%;
+                height: 32%;
+                
+            }
+
+            .square{
+                width: 0%;
+                height: 0%;
+                box-shadow: 1px 2px 30px 10px #ffffff;
+            }
+
+            .trasform{
+                align-items: end;
+                height: 100%;
+            }
+
+            .About{
+                font-size: 20px;
+            }
+
+            style{
+                font-size: 20px;
+            }
+
+            .box-1{
+                height: 115%;
+            }
+
+            /* second component  */
+
+            .box-2{
+                width: 40%;
+                align-items: center;
+            }
+
+            .image{
+                width: 100%;
+                height: 60%;
+                
+            }
+
+            p{
+                font-size: 10px;
+            }
+
+            style{
+                font-size: 5px;
+            }
+            .div-2{
+                height: 150%;
+            }
+
+            .boxes{
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                justify-items: center;
+                gap: 5%;
+            }
+            .skills{
+                height: 65%;
+                width: 75%;
+                border-radius: 10%;
+            }
+            .skills2{
+                height: 65%;
+                width: 75%;
+                border-radius: 10%;
+            }
+            .skills3{
+                height: 65%;
+                width: 75%;
+                border-radius: 10%;
+            }
+            .boxes-1{
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+
+            .box-5{
+                width: 35%;
+            }
+
+            .what-i{
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .doo{
+                width: 35%;
+            }
+
+            a{
+                color: whi;
+            }
+        }
+
+        
+       
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="header">
+            <div class="sujal"><b>Sujal.Pado</b></div>
+            <div class="home"><a href="#Home">Home</a></div>
+            <div class="home"><a href="#About">About</a></div>
+            <div class="home"><a href="#Skills">Skills</a></div>
+            <div class="home"><a href="#project">Project</a></div>
+            <div class="home"><a href="#Contact">Contact</a></div>
+        </div>
+        <div class="box-1" id="Home">
+            <div class="About"><span style="font-size: 20px;">We Learner & Programer</span><br><span
+                    style="font-size: 40px;"><b>Hi, I am</b> </span><span
+                    style="font-size: 40px; color: #808080;"><b>Sujal Padoliya</b></span><br><span
+                    style="font-size: 40px;"><b>I build responsive &</b></span><br><span
+                    style="font-size: 40px;"><b>modern website.</b></span></div>
+            <div class="trasform">
+                <div class="square"></div>
+                <div class="circle"></div>
+            </div>
+        </div>
+        <div class="div-1">
+            <div class="box-2">
+                <div class="image"></div>
+            </div>
+            <div class="box-3" id="About">
+                <div class="small"></div>
+                <div class="small-1">
+                    <span style="font-size: 10px;"><b>MY INTRODUCTION</b><br><span style="font-size: 30px;"><b>About
+                                Me</b></span>
+                        <p>I'm
+                            Suja . R . Padoliya, a Full Stack Developer from Maharashtra in Katol city. <br> I enjoy
+                            building responsive and
+                            user-friendly websites. Skilled in <b>HTML</b>,<b>CSS</b>, <br> and <b>JavaScript</b> with
+                            hands-on project
+                            experience. Created a fashion e-commerce <br>site and personal portfolio. I'M passionate
+                            about clean UI and
+                            mobile-first design. <br>Looking to grow in a tech-drive team and learn and learn more every
+                            day and thanks <br>for my all teachers to support me and tiching.</p>
+                    </span><br>
+                    <span style="font-size: 20px;">"Design is intelligence made visible.Code brings it to
+                        life".</span><br><br>
+
+                    <span style="font-size: 20px;"><b>Name :</b> Sujal . R . Padoliya <br><br>
+                        <b>Date of birth : </b> November 30, 2006 <br><br>
+                        <b>Address : </b>Harankhuri , Katol, Maharashtra <br><br>
+                        <b>Zip code : </b>000000 <br> <br>
+                        <b>Email : </b>Sujalpadoliyaa12@gmail.com <br> <br>
+                        <b>Phone : </b>9284530903</span><br><br>
+                    <button style="border-radius: 10px;">Music</button> <button
+                        style="border-radius: 10px;">Travel</button>
+                    <button style="border-radius: 10px;">Movie</button> <button
+                        style="border-radius: 10px;">Sports</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="div-2" id="Skills">
+            <div class="skill"><b>My Skills Project</b></div>
+            <div class="boxes">
+                <div class="skills"><a href="../portfolio/html-project.html"><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/1200px-HTML5_logo_and_wordmark.svg.png"
+                    alt="" width="100%" height="80%"></a></div>
+
+                <div class="skills"><a href="./css-project.html"><img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png"
+                    alt="" width="100%" height="90%"></a></div>
+
+                <div class="skills"><img src="https://1000logos.net/wp-content/uploads/2020/09/JavaScript-Logo.png"
+                        alt="" width="200%" height="80%"></div>
+                <div class="skills2" >bootstrap</div>
+                <div class="skills3">React </div>
+                <div class="skills"></div>
+            </div>
+        </div>
+
+        <div class="div-3" id="project">
+            <div class="project"><b>My Project</b></div>
+            <div class="boxes-1">
+                <div class="box-5"><img src="" alt="" width="100%" height="100%"></div>
+                <div class="box-5"></div>
+                <div class="box-5"></div>
+            </div>
+        </div>
+
+        <div class="i-do">
+            <div class="header-1"><b>What i do</b></div>
+            <div class="what-i">
+                <div class="doo"></div>
+                <div class="doo"></div>
+                <div class="doo"></div>
+            </div>
+        </div>
+
+        <div class="contact" id="Contact">
+            <h1>Sujal.Padoliya</h1><p>Crafting frontend experiences with code & creativity ✨</p>
+           <div class="links-1">
+             <div class="links"><img src="./assets/images/github.svg" alt="" width="100%" height="100%"></div><br>
+             <div class="links"><img src="./assets/images/instagram.svg" alt="" width="100%" height="100%"></div><br>
+             <div class="links"><img src="./assets/images/linkedin.svg" alt="" width="100%" height="100%"></div>
+             <h4>@2025 Sujal Padoliya. All right reserved.</h4>
+           </div>
+        </div>
+    </div>
+</body>
+
+</html>
