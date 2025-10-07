@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Liquor Mart</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        /* First section */
+        .main-container {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        /* Background image */
+        .image {
+            background-color: black;
+            width: 100%;
+            height: 100%;
+            background-image: url(https://spectralevolution.com/wp-content/uploads/2025/09/Wine-Grapes.png);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /* Black overlay */
+        .black-screen {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.65);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        .header {
+            width: 100%;
+            height: 20%;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        /* Shop name */
+        .shop-name {
+            width: 30%;
+            height: 100%;
+            font-size: clamp(40px, 5vw, 80px);
+            color: white;
+            font-family: 'Tangerine', cursive;
+            display: flex;
+            align-items: center;
+            padding-left: 50px;
+        }
+
+        /* Logo */
+        .logo {
+            width: 30%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo img {
+            width: 35%;
+            height: 60%;
+            object-fit: contain;
+        }
+
+        /* Navigation buttons */
+        .home {
+            width: 10%;
+            height: 100%;
+            text-align: center;
+            font-size: clamp(18px, 2vw, 25px);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .home:hover {
+            color: #9F2348;
+        }
+
+        /* Title section */
+        .title {
+            width: 100%;
+            height: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            animation: slideInAnimation 3s ease-out;
+        }
+
+        @keyframes slideInAnimation {
+            from {
+                transform: translateX(-100vw);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+
+        .name {
+            width: 40%;
+            height: 100%;
+            text-align: center;
+            font-size: clamp(35px, 4vw, 60px);
+            color: white;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            font-family: 'Kantumruy Pro', sans-serif;
+            font-weight: 300;
+        }
+
+        /* Two buttons section */
+        .two-button {
+            width: 100%;
+            height: 10%;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom: 20px;
+        }
+
+        .button-one {
+            background-color: #9F2348;
+            width: 150px;
+            height: 50px;
+            text-align: center;
+            font-size: 18px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Kantumruy Pro', sans-serif;
+        }
+
+        .button-one:hover {
+            background-color: #7a1d3a;
+            transform: translateY(-2px);
+        }
+
+        /* Founder section */
+        .founder {
+            width: 100%;
+            height: 10%;
+        }
+
+        .founder-1 {
+            width: 100%;
+            height: 10%;
+            text-align: end;
+            color: white;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 30px;
+            font-family: 'Kantumruy Pro', sans-serif;
+        }
+
+        /* Second section */
+        .div-two {
+            width: 100vw;
+            min-height: 100vh;
+            background-image: linear-gradient(to bottom right, #680207, #BD0003, black);
+            padding: 40px 20px;
+        }
+
+        .header-1 {
+            width: 100%;
+            font-size: clamp(30px, 4vw, 50px);
+            color: white;
+            font-family: 'Tangerine', cursive;
+            margin-bottom: 30px;
+        }
+
+        .header-1 p {
+            font-size: clamp(16px, 2vw, 20px);
+            font-family: 'Kantumruy Pro', sans-serif;
+            font-weight: 300;
+            margin-top: 10px;
+        }
+
+        /* Product grid */
+        .boxes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            justify-items: center;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .box {
+            width: 330px;
+            height: 350px;
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 1px 2px 30px 5px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .box:hover {
+            transform: translateY(-10px);
+        }
+
+        .mini-box {
+            width: 100%;
+            height: 250px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mini-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .box:hover .mini-box img {
+            transform: scale(1.1);
+        }
+
+        .product-label {
+            width: 100%;
+            height: 100px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            font-family: 'Kantumruy Pro', sans-serif;
+            font-weight: 600;
+            color: #333;
+            text-transform: capitalize;
+        }
+
+        /* Brand logo box */
+        .brand-box {
+            width: 330px;
+            height: 350px;
+            background-color: transparent;
+            border: 3px solid white;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Tangerine', cursive;
+            font-size: 60px;
+            color: white;
+            text-align: center;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                height: auto;
+                padding: 20px;
+            }
+
+            .shop-name,
+            .logo,
+            .home {
+                width: 100%;
+                height: auto;
+                margin: 10px 0;
+            }
+
+            .shop-name {
+                padding-left: 0;
+                text-align: center;
+            }
+
+            .name {
+                width: 90%;
+            }
+
+            .boxes {
+                grid-template-columns: 1fr;
+            }
+
+            .box,
+            .brand-box {
+                width: 90%;
+                max-width: 330px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .div-two {
+                padding: 20px 10px;
+            }
+            
+            .two-button {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <!-- First section -->
+        <div class="image">
+            <div class="black-screen">
+                <!-- Header section -->
+                <div class="header">
+                    <div class="shop-name">
+                        The<br>Liquor Mart
+                    </div>
+                    <div class="logo">
+                        <img src="https://wineshop.themerex.net/splash/src/img/logo.png" alt="Liquor Mart Logo">
+                    </div>
+                    <div class="home">Home</div>
+                    <div class="home">About</div>
+                    <div class="home">Varieties</div>
+                    <div class="home">Contact</div>
+                </div>
+                <!-- Header end -->
+
+                <!-- Title section -->
+                <div class="title">
+                    <div class="name">
+                        NEW LUXURY WINE<br>SHOP FROM KATOL
+                    </div>
+                </div>
+                <!-- Title section end -->
+
+                <!-- Button Section start -->
+                <div class="two-button">
+                    <div class="button-one">Place Order</div>
+                    <div class="button-one">Explore More</div>
+                </div>
+                <!-- Button section end -->
+                
+                <div class="founder"></div>
+                <div class="founder"></div>
+                <div class="founder-1">
+                    Co-founder: S. Jaiswal
+                </div>
+            </div>
+        </div>
+        <!-- First section end -->
+        
+        <!-- Second section -->
+        <div class="div-two">
+            <div class="header-1">
+                Celebrating your culture through community
+                <p>Bringing the world of wine to your doorstep</p>
+            </div>
+            <div class="boxes">
+                <div class="box">
+                    <div class="mini-box">
+                        <img src="https://www.tasteofhome.com/wp-content/uploads/2019/08/shutterstock_1101170873.jpg" alt="Premium Whisky Collection">
+                    </div>
+                    <div class="product-label">Whisky</div>
+                </div>
+                
+                <div class="box">
+                    <div class="mini-box">
+                        <img src="https://images.immediate.co.uk/production/volatile/sites/30/2021/06/wine-tasting-hub-89ce511.jpg" alt="Fine Wine Selection">
+                    </div>
+                    <div class="product-label">Wine</div>
+                </div>
+                
+                <div class="box">
+                    <div class="mini-box">
+                        <img src="https://thumbs.dreamstime.com/b/bottles-famous-global-beer-brands-poznan-pol-mar-including-heineken-becks-bud-miller-corona-stella-artois-san-miguel-143170440.jpg" alt="Craft Beer Collection">
+                    </div>
+                    <div class="product-label">Beer</div>
+                </div>
+                
+                <div class="box">
+                    <div class="mini-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0066/2123/3203/files/Top_5_Rums_You_Need_To_Try_Right_Now-1_480x480.png?v=1621321349" alt="Premium Rum Selection">
+                    </div>
+                    <div class="product-label">Rum</div>
+                </div>
+                
+                <div class="box">
+                    <div class="mini-box">
+                        <img src="https://cdn.shopify.com/s/files/1/0353/9510/9003/files/photo_2024-01-18_03.22.02.jpg?v=1705519334" alt="Premium Vodka Collection">
+                    </div>
+                    <div class="product-label">Vodka</div>
+                </div>
+                
+                <div class="box">
+                    <div class="mini-box">
+                        <img src="https://www.tasteofhome.com/wp-content/uploads/2025/09/Cheers-to-the-Best-Cheap-Champagne_FT.jpg" alt="Champagne Collection">
+                    </div>
+                    <div class="product-label">Champagne</div>
+                </div>
+                
+                <div class="box">
+                    <div class="mini-box">
+                        <img src="https://www.theginguide.com/uploads/6/2/8/8/62884249/best-indian-gins_orig.jpg" alt="Artisan Gin Collection">
+                    </div>
+                    <div class="product-label">Gin</div>
+                </div>
+                
+                <div class="box">
+                    <div class="mini-box">
+                        <img src="https://propecia-online-cheap.com/wp-content/uploads/2023/11/tequila-botts-800x600.jpg" alt="Premium Tequila Selection">
+                    </div>
+                    <div class="product-label">Tequila</div>
+                </div>
+                
+                <div class="brand-box">
+                    The<br>Liquor Mart
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
