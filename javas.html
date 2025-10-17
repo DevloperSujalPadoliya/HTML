@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+    <style>
+        .main {
+            background-color: lightblue;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            /* justify-content: center; */
+            flex-direction: column;
+
+
+        }
+
+        .display {
+            width: 50%;
+            height: 30%;
+            background-color: lightgoldenrodyellow;
+
+        }
+
+        .button {
+            background-color: lightgreen;
+            width: 50%;
+            height: 30%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="display" id="display"></div>
+        <div class="button"><button id="mon" onclick="mon()">mon</button>
+            <button id="tue" onclick="tue()">tue</button>
+            <button id="wen" onclick="wen()">wen</button>
+            <button id="thu" onclick="thu()">thu</button>
+            <button id="fri" onclick="fri()">fri</button>
+            <button id="sat" onclick="sat()">sat</button>
+            <button id="sun" onclick="sun()">sun</button>
+        </div>
+    </div>
+</body>
+<script>
+    function mon() {
+        let x = (document.getElementById("mon").innerHTML);
+        document.getElementById("display").innerHTML = x;
+    }
+    function tue() {
+        let y = (document.getElementById("tue").innerHTML);
+        document.getElementById("display").innerHTML = y;
+    }
+    function wen() {
+        let a = (document.getElementById("wen").innerHTML);
+        document.getElementById("display").innerHTML = a;
+    }
+    function thu () {
+        let b = (document.getElementById("thu").innerHTML);
+        document.getElementById("display").innerHTML = b;
+    }
+    function fri() {
+        let C = (document.getElementById("fri").innerHTML);
+        document.getElementById("display").innerHTML = c;
+    }
+    function sat() {
+        let d = (document.getElementById("sat").innerHTML);
+        document.getElementById("display").innerHTML = d;
+    }
+
+    function sun() {
+        let h = (document.getElementById("sat").innerHTML);
+        document.getElementById("display").innerHTML = h ;
+    }
+
+
+   
+
+</script>
+
+</html>
