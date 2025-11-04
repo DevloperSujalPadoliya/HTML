@@ -5,78 +5,146 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>js</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap" rel="stylesheet">
     <style>
+
+        *{
+            font-family: Bitcount Grid Single;
+        }
         .main {
-            background-color: lightblue;
+            background-color: darkcyan;
             width: 100vw;
             height: 100vh;
             display: flex;
             /* justify-content: center; */
             flex-direction: column;
+            justify-content: center;
+            align-items: center;
 
 
         }
 
         .display {
-            width: 50%;
-            height: 30%;
-            background-color: lightgoldenrodyellow;
+            width: 65%;
+            height: 40%;
+            background-color:lightgrey;
+            border-radius: 20px;
+            /* text-align: center; */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
 
         }
 
-        .button {
+        .div-2 {
             background-color: lightgreen;
-            width: 50%;
-            height: 30%;
+            width: 65%;
+            height: 40%;
+            /* text-align: center; */
+            border-radius: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        button{
+            width: 95px;
+            height: 40px;
+            font-size: 15px;
+            background-color: darkred;
+            color: white;
+            border-radius: 10px;
+            
         }
     </style>
 </head>
 
 <body>
     <div class="main">
-        <div class="display" id="display"></div>
-        <div class="button"><button id="mon" onclick="mon()">mon</button>
-            <button id="tue" onclick="tue()">tue</button>
-            <button id="wen" onclick="wen()">wen</button>
-            <button id="thu" onclick="thu()">thu</button>
-            <button id="fri" onclick="fri()">fri</button>
-            <button id="sat" onclick="sat()">sat</button>
-            <button id="sun" onclick="sun()">sun</button>
+        <div class="display" id="display"><p>Welcome to universal calender</p><p id="day"></p></div>
+        <div class="div-2" id="div-2">
+            <button id="mon" onclick="mon()">Monday</button>
+            <button id="tue" onclick="tue()">Tuesday</button>
+            <button id="wed" onclick="wed()">Wednesday</button>
+            <button id="thu" onclick="thu()">Thuesday</button>
+            <button id="fri" onclick="fri()">Friday</button>
+            <button id="sat" onclick="sat()">Saturday</button>
+            <button id="sun" onclick="sun()">Sunday</button> 
         </div>
     </div>
 </body>
 <script>
     function mon() {
-        let x = (document.getElementById("mon").innerHTML);
-        document.getElementById("display").innerHTML = x;
+        let x = document.getElementById("mon").innerHTML;
+        document.getElementById("display").innerHTML = "Today is :" + x ;
+        document.getElementById("display").style.backgroundColor = "#000435";
+        document.getElementById("display").style.color = "white" ;
+        document.getElementById("div-2").style.backgroundColor = "#FF8040" ;
+        document.getElementById("mon").style.backgroundColor = "#8FABD4" ;
+        document.getElementById("day").innerHTML = "Today is monday :" ;
     }
+
     function tue() {
-        let y = (document.getElementById("tue").innerHTML);
-        document.getElementById("display").innerHTML = y;
+        let y = document.getElementById("tue").innerHTML;
+        document.getElementById("display").innerHTML = "Today is :" + y ;
+        document.getElementById("display").style.backgroundColor = "#B7E5CD" ;
+        document.getElementById("display").style.color = "black" ;
+        document.getElementById("div-2").style.backgroundColor = "#FCB53B"; 
+        document.getElementById("tue").style.backgroundColor = "#CD2C58" ;
     }
-    function wen() {
-        let a = (document.getElementById("wen").innerHTML);
-        document.getElementById("display").innerHTML = a;
+    
+    function wed() {
+        let z = document.getElementById("wed").innerHTML;
+        document.getElementById("display").innerHTML = "Today is :" + z ;
+        document.getElementById("display").style.backgroundColor = "#016B61" ;
+        document.getElementById("display").style.color = "white" ;
+        document.getElementById("div-2").style.backgroundColor = "#450693" ;
+        document.getElementById("wed").style.backgroundColor = "#8C00FF" ;
     }
-    function thu () {
-        let b = (document.getElementById("thu").innerHTML);
-        document.getElementById("display").innerHTML = b;
+
+    function thu() {
+        let j = document.getElementById("thu").innerHTML;
+        document.getElementById("display").innerHTML = "Today is :" + j ;
+        document.getElementById("display").style.backgroundColor = "#BF092F" ;
+        document.getElementById("display").style.color = "white" ;
+        document.getElementById("div-2").style.backgroundColor = "#132440" ;
+        document.getElementById("thu").style.backgroundColor = "#3B9797" ;
     }
+
     function fri() {
-        let C = (document.getElementById("fri").innerHTML);
-        document.getElementById("display").innerHTML = c;
+        let h = document.getElementById("fri").innerHTML;
+        document.getElementById("display").innerHTML = "Today is :" + h ;
+        document.getElementById("display").style.backgroundColor = "#80A1BA" ;
+        document.getElementById("display").style.color = "black" ;
+        document.getElementById("div-2").style.backgroundColor = "#B4DEBD" ;
+        document.getElementById("fri").style.backgroundColor = "#FFF7DD" ;
+        document.getElementById("fri").style.color = "black" ;
     }
+
     function sat() {
-        let d = (document.getElementById("sat").innerHTML);
-        document.getElementById("display").innerHTML = d;
+        let i = document.getElementById("sat").innerHTML;
+        document.getElementById("display").innerHTML = "Today is :" + i ;
+        document.getElementById("display").style.backgroundColor = "#DD0303" ;
+        document.getElementById("display").style.color = "white" ;
+        document.getElementById("div-2").style.backgroundColor = "#FA812F" ;
+        document.getElementById("sat").style.backgroundColor = "#234C6A" ;
+        
+
     }
 
     function sun() {
-        let h = (document.getElementById("sat").innerHTML);
-        document.getElementById("display").innerHTML = h ;
+        let o = document.getElementById("sun").innerHTML;
+        document.getElementById("display").innerHTML = "Today is :" + o ;
+        document.getElementById("display").style.backgroundColor = "#6B3F69" ;
+        document.getElementById("display").style.color = "white" ;
+        document.getElementById("div-2").style.backgroundColor = "#FDAAAA" ;
+        document.getElementById("sun").style.backgroundColor = "#A8FBD3" ;
+        document.getElementById("sun").style.color = "black" ;
     }
-
-
    
 
 </script>
