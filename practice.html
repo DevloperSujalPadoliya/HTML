@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main {
+            width: 100vw;
+            height: 100vh;
+            background-color: lightblue;
+        }
+
+        .display {
+            width: 50%;
+            height: 30%;
+            background-color: lightcoral;
+        }
+
+        .div-1 {
+            width: 50%;
+            height: 30%;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="display" id="display">
+            <input type="text" id="input1">
+        </div>
+        <div class="div-1">
+            <button onclick="click()" id="click-me">click</button>
+        </div>
+    </div>
+</body>
+<script>
+
+    let y = prompt("enter the number");
+
+    function click() {
+
+
+        let x = document.getElementById("input1").value;
+
+
+        let c = Number(x) + Number(y);
+
+        // alert(c);
+        document.getElementById("display").innerHTML = c;
+
+        // console.log(c);
+
+
+    }
+
+
+</script>
+
+</html>
