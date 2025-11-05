@@ -1,0 +1,1163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&display=swap"
+        rel="stylesheet">
+    <style>
+
+        html{
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .main-container {
+            width: 100vw;
+            height: 100vh;
+            background-color: lightblue;
+            background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+        }
+
+        .header-line {
+            width: 100%;
+            height: 9%;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* position: fixed; */
+        }
+
+        .header {
+            width: 95%;
+            height: 50%;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: Roboto;
+        }
+
+        .logo {
+            font-size: 30px;
+            font-weight: 700;
+            color: #2563eb;
+        }
+
+        .nav {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            font-size: 20px;
+
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #0f172a;
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav a:hover {
+            color: #2563eb;
+        }
+
+        .home {
+            width: 100%;
+            height: 91%;
+            background-color: #f8fafc00;
+            display: flex;
+            font-family: Roboto;
+            background: linear-gradient(135deg, var #f8fafc 0%, #e0f2fe 100%);
+        }
+
+        .name {
+            width: 50%;
+            height: 100%;
+            background-color: rgba(240, 128, 128, 0);
+            display: flex;
+            justify-content: end;
+            align-items: center;
+
+        }
+
+        .name-1 {
+            width: 90%;
+            height: 50%;
+            background-color: rgba(173, 216, 230, 0);
+            margin-top: 70px;
+            animation: sujalKaAnimation;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+            animation-timing-function: cubic-bezier(0.46, -0.02, 0, 1.04);
+            animation-direction: alternate-reverse;
+        }
+
+        @keyframes sujalKaAnimation {
+            from {}
+
+            to {
+                transform: translateX(-600px);
+            }
+        }
+
+        .para-1 {
+            font-size: 18px;
+            color: #64748b;
+            /* margin-bottom: 0.5rem; */
+        }
+
+        .para-2 {
+            font-weight: 500;
+            font-size: 30px;
+            font-weight: 600;
+        }
+
+        .span-1 {
+            color: #2563eb;
+        }
+
+        .hero {
+            font-size: 35px;
+        }
+
+        .button {
+            width: 100%;
+            height: 20%;
+            background-color: rgba(255, 182, 193, 0);
+            font-family: Roboto;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .btn-primary {
+            width: 25%;
+            height: 80%;
+            background-color: #1d4ed8;
+            font-size: 1rem;
+            font-weight: 800;
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            align-items: center;
+        }
+
+        .btn-primary:hover {
+            background-color: #1d4ed8;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn-secondry {
+            width: 25%;
+            height: 80%;
+            background-color: #059669;
+            font-size: 1rem;
+            font-weight: 800;
+            color: white;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondry:hover {
+            background-color: #059669;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+        }
+
+        .image {
+            width: 50%;
+            height: 100%;
+            background-color: #f8fafc00;
+        }
+
+
+        .box-1 {
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 255, 0);
+            display: flex;
+            align-items: center;
+        }
+
+        .small {
+            width: 90%;
+            height: 70%;
+            background-color: rgba(240, 128, 128, 0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: sujalAnimation;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+            animation-timing-function: cubic-bezier(0.46, -0.02, 0, 1.04);
+            animation-direction: alternate-reverse;
+
+        }
+
+        @keyframes sujalAnimation {
+            from {}
+
+            to {
+                transform: translateX(700px);
+            }
+        }
+
+        
+
+        .hero-shape {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(135deg, #cbd5e1 0%, #94a3b8 100%);
+            transform: rotate(20deg);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+
+
+        }
+
+        .hero-image {
+            width: 250px;
+            height: 250px;
+            border-radius: 50%;
+            background-color: #2563eb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            border: 5px solid white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            margin-left: 30px;
+        }
+
+        /* About section is start  */
+        .About {
+            width: 100vw;
+            height: 105vh;
+            background-color: #f8fafc;
+            display: flex;
+            font-family: Roboto;
+        }
+
+        .image-1 {
+            width: 30%;
+            height: 100%;
+            background-color: rgba(255, 0, 0, 0);
+            display: flex;
+            justify-content: end;
+        }
+
+        .img-wrrap {
+            width: 75%;
+            height: 60%;
+            background-color: aqua;
+            border-radius: 15px;
+            /* overflow: hidden; */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(135deg, #2563eb 0%, #10b981 100%);
+            margin-top: 100px;
+            margin-right: 30px;
+        }
+
+        .about-info {
+            width: 60%;
+            height: 100%;
+            background-color: rgba(255, 182, 193, 0);
+
+        }
+
+        .section-label {
+            color: #64748b;
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-size: 15px;
+            /* margin-top: 100px; */
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .about-text {
+            font-size: 20px;
+            color: #64748b;
+        }
+
+        .about-quote {
+            font-style: italic;
+            font-size: 21px;
+            color: #2563eb;
+            /* margin-top: 30px; */
+            border-left: 4px solid #2563eb;
+        }
+
+        .span-2 {
+            font-weight: 600;
+
+        }
+
+        .para-3 {
+            font-size: 20px;
+        }
+
+        .buttons {
+            width: 100%;
+            height: 10%;
+            background-color: rgba(32, 178, 171, 0);
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .button-1 {
+            width: 95px;
+            height: 35px;
+            background-color: #f59e0b;
+            border-radius: 20px;
+            text-align: center;
+            display: flex;
+            color: white;
+            transition: all 0.3s ease;
+            justify-content: center;
+            align-items: center;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .button-1:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(245, 158, 11, 0.3);
+        }
+
+        .my-skill {
+            width: 100vw;
+            height: 110vh;
+            background-color: rgba(173, 216, 230, 0);
+            background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
+
+        }
+
+        .header-1 {
+            width: 100%;
+            height: 10%;
+            background-color: rgba(250, 250, 210, 0);
+            text-align: center;
+            font-size: 40px;
+            font-weight: 600;
+            font-family: Roboto;
+        }
+
+        .boxes {
+            width: 100%;
+            height: 90%;
+            background-color: rgba(255, 0, 0, 0);
+
+            display: grid;
+            grid-template-columns: 300px 300px 300px 300px;
+            grid-template-rows: 300px 300px;
+            gap: 30px;
+            justify-content: center;
+
+        }
+
+        .skill {
+            width: 250px;
+            height: 270px;
+            background-color: blue;
+            background: linear-gradient(90deg, #2563eb, #10b981);
+            border-radius: 20px;
+            display: flex;
+            align-items: end;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+
+        }
+
+        .skill-1 {
+            width: 100%;
+            height: 98.5%;
+            background-color: white;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .emoji {
+            width: 100%;
+            height: 40%;
+            border-radius: 20px;
+            font-size: 50px;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .skill-name {
+            width: 100%;
+            height: 60%;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-family: Roboto;
+            border-radius: 20px;
+        }
+
+        .button-2 {
+            width: 120px;
+            height: 40px;
+            background-color: #10b981;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            color: white;
+        }
+
+        .button-2:hover {
+            background-color: #10b981;
+            box-shadow: 0 0 20px 2px #10b981;
+            border: 2px solid #10b981;
+            color: white;
+            transition: all 0.25s;
+        }
+
+        .button-3 {
+            width: 120px;
+            height: 40px;
+            background-color: #64748b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            color: white;
+        }
+
+        .button-3:hover {
+            background-color: #64748b;
+            box-shadow: 0 0 20px 2px #64748b;
+            border: 2px solid #64748b;
+            color: white;
+            transition: all 0.25s;
+        }
+
+        .my-project {
+            width: 100vw;
+            height: 100vh;
+            background-color: red;
+            font-family: Roboto;
+            background: linear-gradient(135deg, #2563eb 0%, #10b981 100%);
+        }
+
+        .header-2 {
+            width: 100%;
+            height: 15%;
+            background-color: rgba(0, 0, 255, 0);
+            text-align: center;
+            font-size: 40px;
+            font-weight: 600;
+            align-content: center;
+        }
+
+        .projects {
+            width: 100%;
+            height: 85%;
+            background-color: rgba(255, 0, 0, 0);
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .project {
+            width: 27%;
+            height: 80%;
+            background-color: rgba(144, 238, 144, 0);
+            border-radius: 20px;
+        }
+
+        .grey {
+            width: 100%;
+            height: 40%;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #e0f2fe 0%, #bfdbfe 100%);
+            text-align: center;
+            align-content: center;
+            font-size: 50px;
+        }
+
+        .project-name {
+            width: 100%;
+            height: 60%;
+            background-color: white;
+            /* text-align: center; */
+            align-content: center;
+            /* border-radius: 20px; */
+        }
+
+        .web{
+            font-weight: 600;
+            font-size: 20px;
+            margin-left: 20px;
+        }
+
+        .para-4 {
+            color: #64748b;
+            margin-left: 20px;
+        }
+
+        .buttons-1 {
+            width: 100%;
+            height: 20%;
+            background-color: rgba(255, 0, 0, 0);
+            display: flex;
+            gap: 10px;
+            margin-left: 20px;
+        }
+
+        .button-4 {
+            width: 80px;
+            height: 30px;
+            background-color: #64748b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            color: white;
+            font-size: 15px;
+        }
+
+        .view-project-btn{
+            width: 30%;
+            height: 20%;
+            text-align: center;
+            align-content: center;
+            margin-left: 20px;
+            background-color: #2563eb;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .view-project-btn:hover {
+            background-color: #2563eb;
+            box-shadow: 0 0 20px 2px #2563eb;
+            border: 2px solid #2563eb;
+            color: white;
+            transition: all 0.25s;
+        }
+        
+
+        .what-i{
+            width: 100vw;
+            height: 100vh;
+            background-color: white;
+            font-family: Roboto;
+        }
+
+        .header-3{
+            width: 100%;
+            height: 15%;
+            background-color: rgba(255, 0, 0, 0);
+            text-align: center;
+            align-content: center;
+            font-size: 50px;
+            font-weight: 600;
+        }
+
+        .box-2{
+            width: 100%;
+            height: 85%;
+            background-color: rgba(0, 0, 255, 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .boxes-2{
+            width: 30%;
+            height: 75%;
+            background-color: #f8fafc;
+            border-radius: 20px;
+             border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .boxes-2:hover {
+            transform: translateY(-10px);
+            border-color: #2563eb;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .box-3{
+            width: 100%;
+            height: 40%;
+            background-color: rgba(128, 128, 128, 0);
+            text-align: center;
+            font-size: 60px;
+            align-content: end;
+            border-radius: 20px;
+        }
+
+        .doo{
+            font-size: 25px;
+        }
+
+        .i-doo{
+            width: 100%;
+            height: 60%;
+            background-color: rgba(240, 128, 128, 0);
+            text-align: center;
+            align-content: center;
+            border-radius: 20px;
+            
+        }
+
+        .para-5{
+            color: #64748b;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        .contact{
+            width: 100vw;
+            height: 50vh;
+            font-family: Roboto;
+             background: linear-gradient(135deg, #f8fafc 0%, #dbeafe 100%);
+        }
+
+         .header-4{
+            width: 100%;
+            height: 15%;
+            background-color: rgba(255, 0, 0, 0);
+            text-align: center;
+            align-content: center;
+            font-size: 50px;
+            font-weight: 600;
+        }
+
+        .line-1{
+            width: 100%;
+            height: 20%;
+            background-color: rgba(255, 0, 0, 0);
+            text-align: center;
+            font-size: 25px;
+            color: #64748b;
+            align-content: center;
+        }
+
+        .link{
+            width: 100%;
+            height: 30%;
+            background-color: rgba(0, 128, 0, 0);
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .links{
+            width:  50px;
+            height: 50px;
+            background-color: white;
+            border-radius: 200px;
+        }
+
+        .copyright{
+            width: 100%;
+            height: 15%;
+            background-color: rgba(255, 0, 0, 0);
+            text-align: center ;
+            color: #64748b;
+            align-content: center;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        .ank{
+            text-decoration: none ;
+            color: white;
+        }
+
+        @media (max-width:477px) {
+            .main-container{
+                height: 110vh;
+            }
+
+            .header{
+                flex-direction: column;
+                height: 80%;
+                
+            }
+
+            .logo{
+                display: flex;
+               /* justify-content: start; */
+               margin-right: 200px
+            }
+
+            .nav{
+                font-size: 15px;
+            }
+            .home{
+                flex-direction: column;
+                height: 100vh;
+            }
+
+            .name{
+                width: 100%;
+                align-items: start;
+                justify-content: center;
+            }
+
+            .btn-primary{
+                font-size: 15px;
+                width: 27%;
+            }
+            
+            .boxes{
+                grid-template-columns: 300px;
+            }
+
+            .image{
+                width: 100%;
+            }
+
+            .small{
+                width: 100%;
+                height: 80%;
+                align-items: start;
+                margin-top: 20px;
+            }
+
+            .hero-shape {
+                width: 210px;
+                height: 210px;
+            }
+
+            .hero-image {
+                width: 210px;
+                height: 150px;
+                margin-right: 30px;
+            }
+
+            .About{
+                flex-direction: column;
+                height: auto;
+            }
+
+            .image-1{
+                width: 100%;
+                height: 350px;
+                justify-content: center;
+                margin-top: 20px;
+            }
+
+            .img-wrrap{
+                margin-top: 0px;
+                height: 95%;
+                margin-right: 0px;
+            }
+
+            
+            .about-info{
+                width: 100%;
+                /* margin-left: 10px; */
+                
+            }
+
+            .section-title{
+                font-size: 2rem;
+                width: 90%;
+                margin-left: 10px;
+            }
+
+            .section-label{
+                width: 90%;
+                margin-left: 10px;
+            }
+
+            .about-text{
+                font-size: 14px;
+                width: 90%;
+                margin-left: 10px;
+            }
+
+            .about-quote{
+                font-size: 15px;
+                width: 92%;
+                margin-left: 10px;
+            }
+
+            .para-3{
+                width: 90%;
+                margin-left: 10px;
+            }
+
+            .span-2{
+                font-size: 15px;
+            }
+            .buttons{       
+                gap: 15px;
+                justify-content: center;
+                width: 100%;
+
+            }
+
+            .button-1{
+                width: 90px;
+                
+            }
+
+            .my-skill{
+                height: 135vh;
+            }
+
+           
+
+            .header-1{
+                height: 100px;
+                align-content: center;
+            }
+
+            .boxes{
+                /* gap: 30px; */
+                grid-template-columns: 200px 200px;
+                justify-items: center;
+            }
+
+            .skill{
+                width: 180px;
+                height: 200px;
+            }
+
+            .my-project{
+                height: 195vh;
+            }
+
+            .header-2{
+                height: 100px;
+            }
+
+            .projects{
+                flex-direction: column;
+                height: auto;
+                
+            }
+
+            .project{
+                width: 100%;
+                height: 400px;
+                justify-items: center;
+                /* margin-bottom: 10px; */
+                
+            }
+
+            .grey{
+                width: 65%;
+                
+            }
+
+            .buttons-1{
+                margin-left: 0px;
+                justify-content: center;
+            }
+            
+            .project-name{
+                width: 65%;
+                border-radius: 20px;
+                
+            }
+
+            .web{
+                margin-left: 20px;
+                font-size: 15px;
+            }
+
+            .what-i{
+                height: 150vh;
+            }
+
+            .header-3{
+                height: 10%;
+                font-size: 40px;
+            }
+
+            .box-2{
+                flex-direction: column;
+            }
+
+            .boxes-2{
+                width: 90%;
+                height: 300px;
+            }
+
+            .contact{
+                height: 40vh;
+            }
+
+            .header-4{
+                font-size:40px;
+            }
+
+            .line-1{
+                font-size: 15px;
+                /* height: 25%; */
+            }
+
+            .link{
+                /* height: 20%; */
+                align-items: center;
+            }
+
+            .links{
+                background: linear-gradient(135deg, #f8fafc 0%, #dbeafe 100%);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="header-line">
+            <div class="header">
+                <div class="logo">Sujal.Pado</div>
+                <nav class="nav">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </div>
+        </div>
+        <div class="home" id="home">
+            <div class="name">
+                <div class="name-1">
+                    <p class="para-1">Web Learner & Programmer</p>
+                    <h1 class="hero">Hi, I am <span class="span-1">Sujal Padoliya</span></h1>
+                    <p class="para-2">I build responsive & modern websites</p>
+                    <div class="button">
+                        <div class="btn-primary">View Projects</div>
+                        <div class="btn-secondry"><a class="ank" href="#contact">Contact Me</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="image">
+                <div class="box-1">
+                    <div class="small">
+                        <div class="hero-shape">
+                            <div class="hero-image"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="About" id="about">
+            <div class="image-1">
+                <div class="img-wrrap"><img src="" alt=""></div>
+            </div>
+            <div class="about-info">
+                <p class="section-label">MY INTRODUCTION</p>
+                <h2 class="section-title">About Me</h2>
+                <p class="about-text">
+                    I'm Sujal R. Padoliya, a Full Stack Developer from Maharashtra in Katol city.
+                    I enjoy building responsive and user-friendly websites. Skilled in <strong>HTML</strong>,
+                    <strong>CSS</strong>, and <strong>JavaScript</strong> with hands-on project experience.
+                    Created a fashion e-commerce site and personal portfolio. I'm passionate about clean UI
+                    and mobile-first design. Looking to grow in a tech-driven team and learn more every day.
+                </p>
+                <div class="about-quote">
+                    &ensp;&ensp;"Design is intelligence made visible. Code brings it to life."
+                </div>
+                <p class="para-3">
+                    <span class="span-2">Name:</span> <span class="about-text">Sujal R. Padoliya </span><br><br>
+                    <span class="span-2">Date of Birth:</span><span class="about-text"> November 30, 2006
+                    </span><br><br>
+                    <span class="span-2">Address:</span> <span class="about-text">Harankhuri, Katol, Maharashtra
+                    </span><br><br>
+                    <span class="span-2">Email:</span><span class="about-text"> sujalpadoliyaa12@gmail.com
+                    </span><br><br>
+                    <span class="span-2">Phone:</span> <span class="about-text">+91 9284530903</span> <br><br>
+                </p>
+                <div class="buttons">
+                    <div class="button-1"><a class="ank" href="https://www.youtube.com/watch?v=mfX7ynqrq2k&list=RDmfX7ynqrq2k&start_radio=1">🎵 Music</a></div>
+                    <div class="button-1"><a class="ank" href="https://www.google.com/search?q=ladakh&oq=Ladakh&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyDwgBEC4YFBiHAhixAxiABDIKCAIQABixAxiABDIMCAMQABhDGIAEGIoFMgwIBBAAGEMYgAQYigUyBwgFEAAYgAQyBwgGEAAYgAQyBwgHEAAYgAQyBwgIEAAYgAQyDwgJEAAYQxixAxiABBiKBdIBCTQ1MDFqMGoxNagCCbACAfEFgspvQYn-Mls&sourceid=chrome&ie=UTF-8">✈️ Travel</a></div>
+                    <div class="button-1"><a class="ank" href="https://www.google.com/search?gs_ssp=eJzj4tbP1TcwNDKoqsrKM2D0kswtVkjJyM_LVCjJSFUozSvJz0lRKC7JL6oEAP6dDY4&q=ms+dhoni+the+untold+story&oq=Ms+dhoni+the+&gs_lcrp=EgZjaHJvbWUqCggBEC4YsQMYgAQyDQgAEAAY4wIYsQMYgAQyCggBEC4YsQMYgAQyBggCEEUYOTIMCAMQABgUGIcCGIAEMgcIBBAAGIAEMgcIBRAAGIAEMgcIBhAAGIAEMgcIBxAAGIAEMgcICBAAGIAEMgcICRAAGIAE0gEKMTc1ODlqMGoxNagCALACAA&sourceid=chrome&ie=UTF-8">🎬 Movies</a></div>
+                    <div class="button-1"><a class="ank" href="https://en.wikipedia.org/wiki/Esports">🎮 Esports</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="my-skill" id="skills">
+            <div class="header-1">My Skills</div>
+            <div class="boxes">
+                <div class="skill">
+                    <div class="skill-1">
+                        <div class="emoji">⚡</div>
+                        <div class="skill-name">
+                            <span>HTML5</span><br>
+                            <span class="about-text">Advanced</span>
+                            <a href="./PORTFOLIO-main/portfolio/Portfolio-file/html-project.html"><div class="button-2">Proficient</div></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-1">
+                        <div class="emoji">🎨</div>
+                        <div class="skill-name">
+                            <span>CSS3</span><br>
+                            <span class="about-text">Advanced</span>
+                            <a href="./PORTFOLIO-main/portfolio/Portfolio-file/css-project.html"><div class="button-2">Proficient</div></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-1">
+                        <div class="emoji">⚙️</div>
+                        <div class="skill-name">
+                            <span>JavaScript</span><br>
+                            <span class="about-text">Intermediate</span>
+                            <div class="button-2">Growing</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-1">
+                        <div class="emoji">📦</div>
+                        <div class="skill-name">
+                            <span>Bootstrap</span><br>
+                            <span class="about-text">Learning</span>
+                            <div class="button-3">Coming Soon</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-1">
+                        <div class="emoji">⚛️</div>
+                        <div class="skill-name">
+                            <span>React</span><br>
+                            <span class="about-text">Upcoming</span>
+                            <div class="button-3">Coming Soon</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <div class="skill-1">
+                        <div class="emoji">🟢</div>
+                        <div class="skill-name">
+                            <span>Node.Js</span><br>
+                            <span class="about-text">Upcoming</span>
+                            <div class="button-3">Coming Soon</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="my-project" id="projects">
+            <div class="header-2">My Project</div>
+            <div class="projects">
+                <div class="project">
+                    <div class="grey">🛍️</div>
+                    <div class="project-name">
+                        <span class="web">E-commerce Fashion Website</span>
+                        <p class="para-4">A modern fashion e-commerce platform with responsive design and smooth user
+                            experience.</p>
+                        <div class="buttons-1">
+                            <div class="button-4">HTML</div>
+                            <div class="button-4">CSS</div>
+                            <div class="button-4">JavaScript</div>
+                        </div>
+                        <div class="view-project-btn">View Project</div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="grey">💼</div>
+                    <div class="project-name">
+                        <span class="web">Portfolio Website</span>
+                        <p class="para-4">Personal portfolio showcasing projects and skills with clean, modern design.</p>
+                        <div class="buttons-1">
+                            <div class="button-4">HTML</div>
+                            <div class="button-4">CSS</div>
+                            
+                        </div>
+                        <div class="view-project-btn"><a class="ank" href="file:///Users/ep_student/Downloads/PORTFOLIO-main/index.html">View Project</a></div>
+                    </div>
+                </div>
+                <div class="project">
+                    <div class="grey">Coming soon</div>
+                    <div class="project-name">
+                        <span class="web">New project in development</span>
+                        <!-- <p class="para-4">Personal portfolio showcasing projects and skills with clean, modern design.</p>
+                        <div class="buttons-1">
+                            <div class="button-4">HTML</div>
+                            <div class="button-4">CSS</div>
+                            
+                        </div>
+                        <div class="view-project-btn">View Project</div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="what-i">
+            <div class="header-3">What I Do</div>
+            <div class="box-2">
+                <div class="boxes-2">
+                    <div class="box-3">💻</div>
+                    <div class="i-doo"><span class="doo">Web Development</span>
+                    <p class="para-5">Building responsive websites with modern technologies and <br>best practices for optimal performance.</p></div>
+                </div>
+                <div class="boxes-2">
+                    <div class="box-3">🎨</div>
+                    <div class="i-doo"><span class="doo">UI/UX Design</span>
+                    <p class="para-5">Creating beautiful and user-friendly interfaces that provide excellent user experiences.</p></div>
+                </div>
+                <div class="boxes-2">
+                    <div class="box-3">🧩</div>
+                    <div class="i-doo"><span class="doo">Problem Solving</span>
+                    <p class="para-5">Developing efficient solutions to complex challenges with clean and maintainable code.</p></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact" id="contact">
+            <div class="header-4">Sujal Padolio</div>
+            <div class="line-1">Crafting frontend experiences with code & creativity ✨</div>
+            <div class="link">
+                <div class="links"><img src="https://cdn-icons-png.flaticon.com/256/25/25231.png" alt="" width="100%" height="100%"></div>
+                <div class="links"><a href="https://www.instagram.com/sujal_padoliya74/"><img src="https://www.iconpacks.net/icons/2/free-instagram-logo-icon-3497-thumb.png" alt="" width="100%" height="100%"></a></div>
+                <div class="links"><a href="https://www.linkedin.com/feed/"><img src="https://static.vecteezy.com/system/resources/previews/018/930/585/non_2x/linkedin-logo-linkedin-icon-transparent-free-png.png" alt="" width="100%" height="100%"></a></div>
+            </div>
+            <div class="copyright">© 2025 Sujal Padoliya. All rights reserved.</div>
+        </div>
+    </div>
+</body>
+
+</html>

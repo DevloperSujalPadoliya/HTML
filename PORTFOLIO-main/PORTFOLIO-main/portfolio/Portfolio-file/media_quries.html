@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media quries</title>
+    <style>
+        .main-container {
+            background-color: red;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        .header {
+            background-color: white;
+            width: 100%;
+            height: 10%;
+            display: flex;
+        }
+
+        .name {
+            background-color: whitesmoke;
+            width: 50%;
+            height: 100%;
+            padding-left: 50px;
+            align-content: center;
+            font-size: 30px;
+        }
+
+        .about {
+            background-color: whitesmoke;
+            width: 10%;
+            height: 100%;
+            text-align: center;
+            align-content: center;
+            font-size: 20px;
+        }
+
+        .box-1{
+            background-color: lightgreen;
+            width: 100%;
+            height: 90%;
+            display: flex;
+        }
+
+        .name-1{
+            background-color: white;
+            width: 50%;
+            height: 100%;
+            text-align: center;
+            align-content: center;
+            font-size: 50px;
+        }
+        .image{
+            background-color: white;
+            width: 50%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .circle{
+            background-color: green;
+            width: 49%;
+            height: 55%;
+            border-radius: 200%;
+
+        }
+
+        /* media is started  */
+
+        @media only screen and (max-width: 455px) {
+            .header {
+                height: 5%;
+            }
+
+            .about {
+                font-size: 10px;
+                background-color: white;
+                width: 5%;
+            }
+
+            .name {
+                font-size: 20px;
+                width: 30%;
+                height: 100%;
+            }
+            .name-1{
+                font-size: 30px;
+                align-content: start;
+                height: 40%;
+                
+            }
+            .box-1{
+                flex-direction: column;
+            }
+            .image{
+                align-items: start;
+                
+            }
+            .circle{
+                width: 83%;
+                height: 40%;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="header">
+            <div class="name">Sujal Padoliya</div>
+            <div class="about">Home</div>
+            <div class="about">About</div>
+            <div class="about">Project</div>
+            <div class="about">Skills</div>
+            <div class="about">Contact</div>
+        </div>
+        <div class="box-1">
+            <div class="name-1">Hii i am <b>sujal.padoliya</b> <br> and i am full stack developer</div>
+            <div class="image">
+                <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
