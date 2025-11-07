@@ -1,0 +1,1220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Liquor Mart - Premium Spirits Collection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gradient-start: #680207;
+            --primary-gradient-end: #000000;
+            --primary-action: #0095FF;
+            --secondary-action: #FFC0CB;
+            --accent: #9F2348;
+            --card-bg: #FFFFFF;
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --text-muted: #999999;
+            --gold-star: #FFB800;
+            --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --shadow-lg: 0 8px 24px rgba(0,0,0,0.12);
+            --shadow-xl: 0 12px 36px rgba(0,0,0,0.16);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            color: var(--text-primary);
+            background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+            overflow-x: hidden;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Header Styles */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: var(--shadow-sm);
+            transition: all 0.3s ease;
+        }
+
+        .header.scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: var(--shadow-md);
+        }
+
+        .header-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .brand {
+            font-family: 'Tangerine', cursive;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--primary-gradient-start);
+            line-height: 1;
+            text-decoration: none;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            font-size: 1rem;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+            color: var(--accent);
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        .search-container {
+            position: relative;
+        }
+
+        .search-input {
+            padding: 0.5rem 1rem 0.5rem 2.5rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            width: 200px;
+            transition: all 0.3s ease;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: var(--primary-action);
+            width: 250px;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 0.8rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-muted);
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            height: 600px;
+            background: linear-gradient(135deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 900px;
+            padding: 0 2rem;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 2.5rem;
+            opacity: 0.95;
+            font-weight: 300;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 3rem;
+            background: white;
+            color: var(--primary-gradient-start);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+        }
+
+        /* Filter Section */
+        .filter-section {
+            max-width: 1400px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+        }
+
+        .filter-chips {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .filter-chip {
+            padding: 0.75rem 1.75rem;
+            border: 2px solid #e0e0e0;
+            border-radius: 50px;
+            background: white;
+            color: var(--text-primary);
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .filter-chip:hover {
+            border-color: var(--primary-action);
+            color: var(--primary-action);
+            transform: translateY(-2px);
+        }
+
+        .filter-chip.active {
+            background: var(--primary-action);
+            color: white;
+            border-color: var(--primary-action);
+        }
+
+        /* Product Grid */
+        .products-section {
+            max-width: 1400px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+
+        /* Product Card */
+        .product-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: var(--shadow-xl);
+        }
+
+        .product-image-container {
+            position: relative;
+            height: 350px;
+            overflow: hidden;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .product-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .product-card:hover .product-image-container img {
+            transform: scale(1.1);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            padding: 0.4rem 0.9rem;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .product-badge.premium {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #000;
+        }
+
+        .product-badge.new {
+            background: linear-gradient(135deg, #00D4FF, #0095FF);
+            color: white;
+        }
+
+        .product-badge.bestseller {
+            background: linear-gradient(135deg, #FF6B6B, #C92A2A);
+            color: white;
+        }
+
+        .wishlist-icon {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .wishlist-icon:hover {
+            background: var(--accent);
+            transform: scale(1.1);
+        }
+
+        .wishlist-icon:hover svg {
+            fill: white;
+            stroke: white;
+        }
+
+        .wishlist-icon svg {
+            width: 20px;
+            height: 20px;
+            stroke: var(--accent);
+            fill: none;
+            transition: all 0.3s ease;
+        }
+
+        .wishlist-icon.active svg {
+            fill: var(--accent);
+        }
+
+        .quick-view-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 0.75rem 2rem;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .product-card:hover .quick-view-btn {
+            opacity: 1;
+        }
+
+        .quick-view-btn:hover {
+            background: rgba(0, 0, 0, 0.95);
+            transform: translate(-50%, -50%) scale(1.05);
+        }
+
+        .product-content {
+            padding: 1.5rem;
+        }
+
+        .product-brand {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-muted);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .product-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 0.75rem;
+            line-height: 1.3;
+        }
+
+        .product-meta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .product-volume {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .rating-container {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .stars {
+            display: flex;
+            gap: 2px;
+        }
+
+        .star {
+            color: var(--gold-star);
+            font-size: 1rem;
+        }
+
+        .star.empty {
+            color: #ddd;
+        }
+
+        .rating-number {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .product-price {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-gradient-start);
+            margin-bottom: 1rem;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .add-to-cart-btn {
+            flex: 1;
+            padding: 0.9rem 1.5rem;
+            background: var(--primary-action);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .add-to-cart-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            transform: translate(-50%, -50%);
+            transition: width 0.5s, height 0.5s;
+        }
+
+        .add-to-cart-btn:hover::before {
+            width: 300px;
+            height: 300px;
+        }
+
+        .add-to-cart-btn:hover {
+            background: #007acc;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(0, 149, 255, 0.3);
+        }
+
+        .quick-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .quick-action-btn {
+            width: 44px;
+            height: 44px;
+            background: white;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .quick-action-btn:hover {
+            border-color: var(--primary-action);
+            background: var(--primary-action);
+        }
+
+        .quick-action-btn:hover svg {
+            stroke: white;
+        }
+
+        /* Toast Notification */
+        .toast {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #2e7d32;
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            box-shadow: var(--shadow-lg);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+            z-index: 2000;
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        .toast-icon {
+            width: 24px;
+            height: 24px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2e7d32;
+            font-weight: 700;
+        }
+
+        /* Footer */
+        .footer {
+            background: linear-gradient(135deg, var(--primary-gradient-start) 0%, var(--primary-gradient-end) 100%);
+            color: white;
+            padding: 3rem 2rem 1.5rem;
+            margin-top: 5rem;
+        }
+
+        .footer-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .footer-brand {
+            font-family: 'Tangerine', cursive;
+            font-size: 4rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .footer-tagline {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        .footer-copyright {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Loading State */
+        .skeleton {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: loading 1.5s infinite;
+        }
+
+        @keyframes loading {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+
+            .brand {
+                font-size: 2.5rem;
+            }
+
+            .nav-menu {
+                gap: 1.5rem;
+                font-size: 0.9rem;
+            }
+
+            .logo-container {
+                order: -1;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .search-container {
+                order: 3;
+                width: 100%;
+            }
+
+            .search-input {
+                width: 100%;
+            }
+
+            .search-input:focus {
+                width: 100%;
+            }
+
+            .hero {
+                height: 500px;
+                margin-top: 120px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.2rem;
+            }
+
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-menu {
+                gap: 1rem;
+                justify-content: center;
+                width: 100%;
+            }
+
+            .nav-menu a {
+                font-size: 0.85rem;
+            }
+
+            .brand {
+                font-size: 2rem;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .filter-chips {
+                gap: 0.5rem;
+            }
+
+            .filter-chip {
+                padding: 0.6rem 1.2rem;
+                font-size: 0.85rem;
+            }
+
+            .toast {
+                left: 1rem;
+                right: 1rem;
+                bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="#" class="brand">The Liquor Mart</a>
+            <div class="logo-container">
+                <img src="https://wineshop.themerex.net/splash/src/img/logo.png" alt="The Liquor Mart Logo">
+            </div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#varieties">Varieties</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="search-container">
+                <span class="search-icon">🔍</span>
+                <input type="text" class="search-input" placeholder="Search products..." id="searchInput">
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Premium Spirits Collection</h1>
+            <p>Discover World-Class Whisky &amp; Fine Liquors</p>
+            <a href="#varieties" class="cta-button">Explore Collection</a>
+        </div>
+    </section>
+
+    <!-- Filter Section -->
+    <section class="filter-section" id="varieties">
+        <div class="section-header">
+            <h2>Featured Collection</h2>
+            <p>Browse our carefully curated selection of premium spirits</p>
+        </div>
+        <div class="filter-chips">
+            <button class="filter-chip active" data-filter="all">All Varieties</button>
+            <button class="filter-chip" data-filter="Blended Scotch">Blended Scotch</button>
+            <button class="filter-chip" data-filter="Blended Indian">Blended Indian</button>
+            <button class="filter-chip" data-filter="premium">Premium Selection</button>
+            <button class="filter-chip" data-filter="bestseller">Best Sellers</button>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="products-grid" id="productsGrid">
+            <!-- Products will be injected here by JavaScript -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">The Liquor Mart</div>
+            <p class="footer-tagline">Your destination for premium spirits and fine liquors</p>
+            <div class="footer-links">
+                <a href="#about">About Us</a>
+                <a href="#varieties">Our Collection</a>
+                <a href="#contact">Contact</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+            <div class="footer-copyright">
+                &copy; 2025 The Liquor Mart. All rights reserved. Drink Responsibly.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-icon">✓</div>
+        <div class="toast-message">Added to cart successfully!</div>
+    </div>
+
+    <script>
+        // Product Data
+        const products = [
+            {
+                name: "Ballantine",
+                brand: "Ballantine",
+                volume: "750ml",
+                rating: 4.5,
+                category: "Blended Scotch",
+                image: "https://mansionz.in/cdn/shop/files/BALLANTINEFINESCOTCH.jpg?v=1709104885",
+                price: "₹2,499"
+            },
+            {
+                name: "Johnnie Walker Red Label",
+                brand: "Johnnie Walker",
+                volume: "750ml",
+                rating: 4.5,
+                category: "Blended Scotch",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIrlLKXkzzN1af1Mg4p1sRdA2ItUkGr2D4r7_BY0Fo9hNoYEUFZ-BeJxbCLXk64FSK2H0&usqp=CAU",
+                price: "₹1,899"
+            },
+            {
+                name: "ICONiQ White",
+                brand: "ICONiQ",
+                volume: "750ml",
+                rating: 4.6,
+                category: "Blended Scotch",
+                image: "https://mansionz.in/cdn/shop/files/ICONIQWHITEINTWHISKY.jpg?v=1724414977",
+                price: "₹1,299"
+            },
+            {
+                name: "Johnnie Walker Black Label",
+                brand: "Johnnie Walker",
+                volume: "750ml",
+                rating: 4.9,
+                category: "Blended Scotch",
+                image: "https://images.ctfassets.net/waruwpig3jxu/rYk8WxpJ1ellZvibRckWT/0e8df23f16b39c6d986faf6f68af8fee/black-750ml_producthero_lifestyle-01_desktop.webp?&w=2560&q=80",
+                price: "₹3,299",
+                badge: "Best Seller"
+            },
+            {
+                name: "Indri Trini",
+                brand: "Indri",
+                volume: "750ml",
+                rating: 4.8,
+                category: "Blended Scotch",
+                image: "https://delhidutyfree.co.in/media/catalog/product/cache/c3073cf0652b87af145d4aff9d92466d/2/0/2003022.webp",
+                price: "₹4,999",
+                badge: "Premium"
+            },
+            {
+                name: "Royal Stag",
+                brand: "Royal Stag",
+                volume: "780ml",
+                rating: 4.5,
+                category: "Blended Scotch",
+                image: "https://mansionz.in/cdn/shop/files/ROYALSTAGDELUXEWHISKY.jpg?v=1715174731",
+                price: "₹1,099"
+            },
+            {
+                name: "Oaksmith International",
+                brand: "Oaksmith",
+                volume: "750ml",
+                rating: 4.6,
+                category: "Blended Scotch",
+                image: "https://mansionz.in/cdn/shop/files/OAKSMITHINTERNATIONALBLENDEDWHISKY.jpg?v=1715151467",
+                price: "₹1,599"
+            },
+            {
+                name: "Directors Special Black",
+                brand: "Directors Special",
+                volume: "750ml",
+                rating: 4.5,
+                category: "Blended Indian",
+                image: "https://www.bswliquor.com/cdn/shop/files/Directors-Special-Black_grande.jpg?v=1695831288",
+                price: "₹899"
+            },
+            {
+                name: "Directors Special Gold",
+                brand: "Directors Special",
+                volume: "750ml",
+                rating: 4.4,
+                category: "Blended Indian",
+                image: "https://www.livcheers.com/static/content/images/liquor/LCIN02712.webp",
+                price: "₹799"
+            },
+            {
+                name: "8pm Special Rare",
+                brand: "8pm",
+                volume: "750ml",
+                rating: 4.6,
+                category: "Blended Indian",
+                image: "https://www.livcheers.com/static/content/images/liquor/LCIN02310.webp",
+                price: "₹699"
+            },
+            {
+                name: "Imperial Blue",
+                brand: "Imperial",
+                volume: "750ml",
+                rating: 4.6,
+                category: "Blended Indian",
+                image: "https://mansionz.in/cdn/shop/files/IMPERIALBLUESUPERIORGRAIN.jpg?v=1715078461",
+                price: "₹599"
+            },
+            {
+                name: "Milestone Blue",
+                brand: "Milestone",
+                volume: "1000ml",
+                rating: 4.6,
+                category: "Blended Indian",
+                image: "https://www.livcheers.com/static/content/images/liquor/LCIN02806.webp",
+                price: "₹899"
+            },
+            {
+                name: "Royal Challenge Finest",
+                brand: "Royal Challenge",
+                volume: "750ml",
+                rating: 4.6,
+                category: "Blended Indian",
+                image: "https://drinksbuff.com/wp-content/uploads/2022/08/Royal-Challenge-Premium-Select-Whisky.png",
+                price: "₹1,199",
+                badge: "New"
+            },
+            {
+                name: "Royal Stag Barrel",
+                brand: "Royal Stag",
+                volume: "750ml",
+                rating: 4.6,
+                category: "Blended Indian",
+                image: "https://www.livcheers.com/static/content/images/liquor/LCIN01729.webp",
+                price: "₹1,499"
+            },
+            {
+                name: "Royal Challenge Play",
+                brand: "Royal Challenge",
+                volume: "750ml",
+                rating: 4.6,
+                category: "Blended Indian",
+                image: "https://www.livcheers.com/static/content/images/liquor/LCIN02862.webp",
+                price: "₹999"
+            },
+            {
+                name: "Backbencher",
+                brand: "Backbencher",
+                volume: "750ml",
+                rating: 4.5,
+                category: "Blended Indian",
+                image: "https://ganeshaenterprises.net/wp-content/uploads/2024/07/Backbencher-Mock-Up-Merged-Light.jpg",
+                price: "₹599"
+            },
+            {
+                name: "Blenders Pride",
+                brand: "Blenders Pride",
+                volume: "750ml",
+                rating: 4.6,
+                category: "Blended Indian",
+                image: "https://mansionz.in/cdn/shop/files/BLENDERSPRIDEPREMIUM.jpg?v=1709112204",
+                price: "₹1,299"
+            },
+            {
+                name: "Old Oak 12 Year",
+                brand: "Old Oak",
+                volume: "750ml",
+                rating: 4.6,
+                category: "Blended Indian",
+                image: "https://www.livcheers.com/static/content/images/liquor/LCIN02340.webp",
+                price: "₹2,199",
+                badge: "Premium"
+            },
+            {
+                name: "McDowell's No 1",
+                brand: "McDowell's",
+                volume: "750ml",
+                rating: 4.5,
+                category: "Blended Scotch",
+                image: "https://www.livcheers.com/static/content/images/liquor/LCIN04480.webp",
+                price: "₹899"
+            },
+            {
+                name: "Officers Choice",
+                brand: "Officers Choice",
+                volume: "750ml",
+                rating: 4.1,
+                category: "Blended Scotch",
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsltuXH3hU-L9bPdW6i7oUjVyUyfXsG7TAYA&s",
+                price: "₹599"
+            }
+        ];
+
+        // Generate stars HTML
+        function generateStars(rating) {
+            const fullStars = Math.floor(rating);
+            const hasHalfStar = rating % 1 !== 0;
+            let starsHTML = '';
+            
+            for (let i = 0; i < fullStars; i++) {
+                starsHTML += '<span class="star">★</span>';
+            }
+            
+            if (hasHalfStar) {
+                starsHTML += '<span class="star">★</span>';
+            }
+            
+            const emptyStars = 5 - Math.ceil(rating);
+            for (let i = 0; i < emptyStars; i++) {
+                starsHTML += '<span class="star empty">★</span>';
+            }
+            
+            return starsHTML;
+        }
+
+        // Generate product card HTML
+        function generateProductCard(product) {
+            const badgeHTML = product.badge ? `
+                <div class="product-badge ${product.badge.toLowerCase().replace(' ', '')}">
+                    ${product.badge}
+                </div>
+            ` : '';
+
+            return `
+                <div class="product-card" data-category="${product.category}" data-badge="${product.badge || ''}">
+                    <div class="product-image-container">
+                        <img src="${product.image}" alt="${product.name}" loading="lazy">
+                        ${badgeHTML}
+                        <div class="wishlist-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                            </svg>
+                        </div>
+                        <button class="quick-view-btn">Quick View</button>
+                    </div>
+                    <div class="product-content">
+                        <div class="product-brand">${product.brand}</div>
+                        <h3 class="product-name">${product.name}</h3>
+                        <div class="product-meta">
+                            <div class="product-volume">
+                                <span>🍾</span>
+                                <span>${product.volume}</span>
+                            </div>
+                            <div class="rating-container">
+                                <div class="stars">${generateStars(product.rating)}</div>
+                                <span class="rating-number">${product.rating}</span>
+                            </div>
+                        </div>
+                        <div class="product-price">${product.price}</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart-btn" data-product="${product.name}">
+                                Add to Cart
+                            </button>
+                            <div class="quick-actions">
+                                <button class="quick-action-btn" title="Compare">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <polyline points="16 3 21 3 21 8"></polyline>
+                                        <line x1="4" y1="20" x2="21" y2="3"></line>
+                                        <polyline points="21 16 21 21 16 21"></polyline>
+                                        <line x1="15" y1="15" x2="21" y2="21"></line>
+                                        <line x1="4" y1="4" x2="9" y2="9"></line>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Render products
+        function renderProducts(productsToRender) {
+            const grid = document.getElementById('productsGrid');
+            grid.innerHTML = productsToRender.map(product => generateProductCard(product)).join('');
+            
+            // Add event listeners after rendering
+            addProductEventListeners();
+        }
+
+        // Add event listeners to products
+        function addProductEventListeners() {
+            // Add to cart buttons
+            document.querySelectorAll('.add-to-cart-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const productName = btn.dataset.product;
+                    showToast(`${productName} added to cart!`);
+                });
+            });
+
+            // Wishlist buttons
+            document.querySelectorAll('.wishlist-icon').forEach(icon => {
+                icon.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    icon.classList.toggle('active');
+                });
+            });
+
+            // Quick view buttons
+            document.querySelectorAll('.quick-view-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const card = btn.closest('.product-card');
+                    const productName = card.querySelector('.product-name').textContent;
+                    showToast(`Quick view: ${productName}`);
+                });
+            });
+        }
+
+        // Show toast notification
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const messageEl = toast.querySelector('.toast-message');
+            messageEl.textContent = message;
+            toast.classList.add('show');
+            
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // Filter functionality
+        document.querySelectorAll('.filter-chip').forEach(chip => {
+            chip.addEventListener('click', () => {
+                // Update active state
+                document.querySelectorAll('.filter-chip').forEach(c => c.classList.remove('active'));
+                chip.classList.add('active');
+                
+                const filter = chip.dataset.filter;
+                let filteredProducts = products;
+                
+                if (filter === 'all') {
+                    filteredProducts = products;
+                } else if (filter === 'premium') {
+                    filteredProducts = products.filter(p => p.badge === 'Premium');
+                } else if (filter === 'bestseller') {
+                    filteredProducts = products.filter(p => p.badge === 'Best Seller');
+                } else {
+                    filteredProducts = products.filter(p => p.category === filter);
+                }
+                
+                renderProducts(filteredProducts);
+            });
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById('searchInput');
+        searchInput.addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const filteredProducts = products.filter(p => 
+                p.name.toLowerCase().includes(searchTerm) ||
+                p.brand.toLowerCase().includes(searchTerm) ||
+                p.category.toLowerCase().includes(searchTerm)
+            );
+            renderProducts(filteredProducts);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Initial render
+        renderProducts(products);
+    </script>
+</body>
+</html>
