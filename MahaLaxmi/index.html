@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MahaLaxmi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        font-family: Roboto;
+      }
+
+      .main {
+        width: 100%;
+        height: 100vh;
+        background-color: lightblue;
+      }
+
+      .header {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        background-color: white;
+      }
+
+      .logo {
+        width: 60px;
+        height: 60px;
+        background-color: #2e7d32;
+        border-radius: 100px;
+        text-align: center;
+        align-content: center;
+        font-size: 180%;
+      }
+
+      .header1 {
+        width: 30%;
+        height: 100%;
+        /* background-color: red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .shop-name {
+        font-size: 150%;
+        color: black;
+        font-weight: 600;
+        color: #2e7d32;
+      }
+
+      /* this is nav bar  */
+      .nav {
+        width: 40%;
+        height: 100%;
+        /* background-color: yellow; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+      }
+
+      a {
+        color: black;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        cursor: pointer;
+      }
+
+      a:hover {
+        color: #2e7d32;
+      }
+
+      .cart {
+        width: 30%;
+        height: 100%;
+        /* background-color: rgb(26, 23, 215); */
+        text-align: center;
+        align-content: center;
+        font-size: 200%;
+      }
+
+      /* this is home section  */
+      .home {
+        width: 100%;
+        height: 90%;
+        /* background-color: lightcoral; */
+        background-image: linear-gradient(135deg, #fff8e1 0%, #ffffff 100%);
+        display: flex;
+      }
+
+      .name {
+        width: 50%;
+        height: 100%;
+        /* background-color: green; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: end;
+
+        font-size: 400%;
+      }
+
+      .name1 {
+        width: 90%;
+        height: 10%;
+        /* background-color: lightblue; */
+        text-align: start;
+        color: #0b5c0f;
+      }
+
+      .para {
+        width: 90%;
+        height: 10%;
+        /* background-color: red; */
+
+        font-size: 25%;
+      }
+
+      .btn {
+        width: 90%;
+        height: 10%;
+        /* background-color: orange; */
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .btn1 {
+        width: 25%;
+        border-radius: 10px;
+        border: none;
+        height: 70%;
+        font-size: 30%;
+        color: white;
+        background-color: rgba(255, 255, 255, 0);
+      }
+
+      .shop-photo {
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: lightgreen; */
+      }
+      .circle {
+        width: 500px;
+        height: 500px;
+        border-radius: 300px;
+        background-color: #13bd1c;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .iner-circle {
+        width: 490px;
+        height: 490px;
+        background-color: white;
+        border-radius: 300px;
+      }
+
+      /* This is shop terms section */
+
+      .term{
+        width: 100%;
+        height: 60vh;
+        background-color: gray;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 50px ;
+      }
+
+      .post{
+        width: 20%;
+        height: 60%;
+        background-color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main">
+      <div class="header">
+        <!-- this is the logo and shop name section  -->
+        <div class="header1">
+          <div class="logo">🥛</div>
+          <div class="shop-name" style="margin-left: 10px">MahaLaxmi Dairy</div>
+        </div>
+        <!-- this is nav bar section  -->
+        <div class="nav">
+          <a href="">Home</a>
+          <a href="">Product</a>
+          <a href="">About</a>
+          <a href="">Contact</a>
+        </div>
+
+        <!-- this is cart section  -->
+        <div class="cart">🛒</div>
+      </div>
+      <!-- this is home section  -->
+      <div class="home">
+        <div class="name">
+          <div class="name1">Fresh Dairy</div>
+          <div class="name1">Products Delivered</div>
+          <div class="name1">Product</div>
+          <div class="para">
+            Experience the richness of farm-fresh milk, creamy dahi, and
+            authentic paneer. <br />
+            Made with love and delivered to your doorstep.
+          </div>
+          <div class="btn">
+            <button class="btn1" style="background-color: #2e7d32">
+              Shop Now
+            </button>
+            <button
+              class="btn1"
+              style="border: 2px solid #2e7d32; color: #2e7d32"
+            >
+              Explore More
+            </button>
+          </div>
+        </div>
+        <div class="shop-photo">
+          <div class="circle">
+            <div class="iner-circle"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- This is shop terms section  -->
+     <div class="term">
+      <div class="post"></div>
+       <div class="post"></div>
+        <div class="post"></div>
+         <div class="post"></div>
+     </div>
+  </body>
+</html>
