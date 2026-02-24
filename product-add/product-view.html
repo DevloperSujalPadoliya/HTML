@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Flipkart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;600;700&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Roboto', Arial, sans-serif;
+        }
+
+        body {
+            background: #f1f3f6;
+        }
+
+        /* Header */
+        .header {
+            background: #fff;
+            padding: 16px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, #ff9f00, #ff5722);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .logo-text {
+            font-size: 22px;
+            font-weight: 700;
+            color: #2874f0;
+        }
+
+        .logo-text span {
+            color: #ff9f00;
+        }
+
+        .search-bar {
+            flex: 1;
+            max-width: 500px;
+            margin: 0 40px;
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 12px 16px 12px 45px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .search-bar input:focus {
+            outline: none;
+            border-color: #2874f0;
+            box-shadow: 0 0 0 4px rgba(40, 116, 240, 0.1);
+        }
+
+        .search-bar i {
+            position: absolute;
+            left: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #666;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .header-btn {
+            text-decoration: none;
+            color: #2874f0;
+            font-weight: 600;
+            padding: 10px 24px;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            font-size: 15px;
+        }
+
+        .header-btn:hover {
+            background: #f0f0f0;
+        }
+
+        .header-btn.primary {
+            background: #ff9f00;
+            color: #fff;
+        }
+
+        .header-btn.primary:hover {
+            background: #e68a00;
+        }
+
+        .cart-btn {
+            position: relative;
+            background: none;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background: #ff9f00;
+            color: #fff;
+            font-size: 10px;
+            padding: 2px 6px;
+            border-radius: 10px;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background: #fff;
+            padding: 12px 40px;
+            font-size: 13px;
+            color: #666;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .breadcrumb a {
+            color: #2874f0;
+            text-decoration: none;
+        }
+
+        .breadcrumb span {
+            margin: 0 8px;
+        }
+
+        /* Main Container */
+        .main-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px 40px;
+            background: #fff;
+        }
+
+        /* Product Section */
+        .product-section {
+            display: flex;
+            gap: 30px;
+            padding: 24px 0;
+        }
+
+        /* Left - Images */
+        .product-images {
+            width: 450px;
+            flex-shrink: 0;
+        }
+
+        .main-image-container {
+            position: relative;
+            width: 100%;
+            height: 450px;
+            background: #f8f9fa;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 1px solid #e0e0e0;
+        }
+
+        .main-image {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .main-image:hover {
+            cursor: zoom-in;
+        }
+
+        .product-badges {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .badge {
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .badge.assured {
+            background: #26a541;
+            color: #fff;
+        }
+
+        .badge.exchange {
+            background: #ff9f00;
+            color: #fff;
+        }
+
+        .wishlist-btn {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 18px;
+            color: #666;
+        }
+
+        .wishlist-btn:hover {
+            border-color: #ff3b5c;
+            color: #ff3b5c;
+        }
+
+        .wishlist-btn.active {
+            background: #ff3b5c;
+            border-color: #ff3b5c;
+            color: #fff;
+        }
+
+        .thumbnail-list {
+            display: flex;
+            gap: 12px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+        }
+
+        .thumbnail {
+            width: 65px;
+            height: 65px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: #fff;
+        }
+
+        .thumbnail:hover, .thumbnail.active {
+            border-color: #2874f0;
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        /* Right - Details */
+        .product-details {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .product-category {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 6px;
+        }
+
+        .product-category:hover {
+            color: #2874f0;
+        }
+
+        .product-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 10px;
+            line-height: 1.4;
+        }
+
+        .rating-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .rating-badge {
+            background: linear-gradient(135deg, #26a541 0%, #20bf6b 100%);
+            color: #fff;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .rating-count {
+            font-size: 14px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .price-section {
+            margin: 20px 0;
+            padding: 20px 0;
+            border-top: 1px dashed #e0e0e0;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+
+        .price-row {
+            display: flex;
+            align-items: baseline;
+            gap: 12px;
+            margin-bottom: 12px;
+            flex-wrap: wrap;
+        }
+
+        .current-price {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a2e;
+        }
+
+        .original-price {
+            font-size: 18px;
+            color: #999;
+            text-decoration: line-through;
+        }
+
+        .discount-percent {
+            font-size: 16px;
+            color: #26a541;
+            font-weight: 700;
+        }
+
+        .coupon-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            color: #c70039;
+            padding: 10px 16px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            border: 1px dashed #c70039;
+        }
+
+        .available-offers {
+            margin: 20px 0;
+        }
+
+        .offers-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 14px;
+        }
+
+        .offer-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .offer-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 13px;
+            color: #333;
+        }
+
+        .offer-icon {
+            color: #26a541;
+            font-size: 12px;
+            margin-top: 3px;
+        }
+
+        .delivery-section {
+            margin: 20px 0;
+            padding: 20px 0;
+            border-top: 1px dashed #e0e0e0;
+            border-bottom: 1px dashed #e0e0e0;
+        }
+
+        .delivery-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .delivery-icon {
+            width: 36px;
+            height: 36px;
+            background: #2874f0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 14px;
+        }
+
+        .delivery-text {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .delivery-highlight {
+            font-weight: 700;
+            color: #26a541;
+        }
+
+        .pincode-section {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 16px;
+        }
+
+        .pincode-input {
+            padding: 10px 14px;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            font-size: 14px;
+            width: 130px;
+        }
+
+        .pincode-input:focus {
+            outline: none;
+            border-color: #2874f0;
+        }
+
+        .pincode-check-btn {
+            background: none;
+            color: #2874f0;
+            border: none;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .pincode-check-btn:hover {
+            text-decoration: underline;
+        }
+
+        /* Stock Section */
+        .stock-section {
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .stock-status {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .stock-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #26a541;
+        }
+
+        .stock-dot.low {
+            background: #ff9f00;
+        }
+
+        .stock-dot.out {
+            background: #ff3b30;
+        }
+
+        .stock-text {
+            font-size: 14px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        .stock-quantity {
+            font-size: 14px;
+            color: #666;
+        }
+
+        /* Seller */
+        .seller-section {
+            margin: 20px 0;
+            font-size: 14px;
+            color: #666;
+        }
+
+        .seller-name {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .seller-rating {
+            color: #ff9f00;
+            margin-left: 8px;
+        }
+
+        /* Action Buttons */
+        .action-buttons {
+            display: flex;
+            gap: 12px;
+            margin: 24px 0;
+        }
+
+        .btn-add-cart, .btn-buy-now {
+            flex: 1;
+            padding: 16px 24px;
+            font-size: 15px;
+            font-weight: 700;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            text-transform: uppercase;
+        }
+
+        .btn-add-cart {
+            background: #ff9f00;
+            color: #fff;
+        }
+
+        .btn-add-cart:hover {
+            background: #e68a00;
+        }
+
+        .btn-buy-now {
+            background: #fb641b;
+            color: #fff;
+        }
+
+        .btn-buy-now:hover {
+            background: #e54d0e;
+        }
+
+        /* Highlights */
+        .highlights-section {
+            margin: 20px 0;
+        }
+
+        .highlights-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 14px;
+        }
+
+        .highlights-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .highlight-item {
+            background: #f8f9fa;
+            padding: 8px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: #333;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .highlight-item i {
+            color: #666;
+            font-size: 10px;
+        }
+
+        /* Bottom Section - Specifications */
+        .product-info-bottom {
+            background: #fff;
+            margin-top: 20px;
+            padding: 24px 40px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .info-tabs {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+            padding-bottom: 0;
+        }
+
+        .info-tab {
+            font-size: 15px;
+            font-weight: 600;
+            color: #666;
+            cursor: pointer;
+            padding: 12px 0;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+            background: none;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+
+        .info-tab.active {
+            color: #2874f0;
+            border-bottom-color: #2874f0;
+        }
+
+        .specs-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .specs-table tr {
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .specs-table td {
+            padding: 14px 16px;
+            font-size: 14px;
+        }
+
+        .specs-table td:first-child {
+            color: #666;
+            width: 30%;
+            font-weight: 500;
+        }
+
+        .specs-table td:last-child {
+            color: #1a1a2e;
+            font-weight: 500;
+        }
+
+        /* Empty/Error State */
+        .error-state {
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .error-state i {
+            font-size: 64px;
+            color: #ddd;
+            margin-bottom: 20px;
+        }
+
+        .error-state h2 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .error-state p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .btn-go-back {
+            background: #2874f0;
+            color: #fff;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-go-back:hover {
+            background: #1a5bb8;
+        }
+
+        /* Toast */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(150px);
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 500;
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: 1000;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        .toast.success {
+            background: linear-gradient(135deg, #26a541 0%, #20bf6b 100%);
+        }
+
+        .toast i {
+            font-size: 18px;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .product-section {
+                flex-direction: column;
+            }
+
+            .product-images {
+                width: 100%;
+            }
+
+            .main-image-container {
+                height: 350px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 16px;
+                padding: 16px;
+            }
+
+            .search-bar {
+                margin: 0;
+                max-width: 100%;
+                width: 100%;
+            }
+
+            .main-container {
+                padding: 20px 16px;
+            }
+
+            .product-info-bottom {
+                padding: 20px 16px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { 
+                opacity: 0; 
+                transform: translateY(30px); 
+            }
+            to { 
+                opacity: 1; 
+                transform: translateY(0); 
+            }
+        }
+
+        .product-section {
+            animation: fadeInUp 0.6s ease;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo-section">
+            <a href="products.html" class="logo">
+                <div class="logo-img">F</div>
+                <span class="logo-text">Flipkart<span>Plus</span></span>
+            </a>
+        </div>
+
+        <div class="search-bar">
+            <i class="fas fa-search"></i>
+            <input type="text" placeholder="Search for products, brands and more" id="searchInput">
+        </div>
+
+        <div class="header-actions">
+            <a href="products.html" class="header-btn">
+                <i class="fas fa-arrow-left"></i> Continue Shopping
+            </a>
+            <a href="index.html" class="header-btn primary">
+                <i class="fas fa-plus"></i> Add Product
+            </a>
+            <button class="cart-btn" id="cartBtn">
+                <i class="fas fa-shopping-cart"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb" id="breadcrumb">
+        <a href="products.html">Home</a> <span>/</span> <a href="#" id="categoryLink">Electronics</a> <span>/</span> Product Details
+    </div>
+
+    <!-- Main Container -->
+    <div class="main-container" id="productContainer">
+        <!-- Product will be loaded here -->
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toastMessage">Item added to cart!</span>
+    </div>
+
+    <script>
+        // State
+        let product = null;
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let currentImageIndex = 0;
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            loadProduct();
+            updateCartCount();
+        });
+
+        // Load Product
+        function loadProduct() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = parseInt(urlParams.get('id'));
+
+            if (!productId) {
+                showErrorState();
+                return;
+            }
+
+            let products = JSON.parse(localStorage.getItem('products')) || [];
+            
+            // Add sample products if empty
+            if (products.length === 0) {
+                products = addSampleProducts();
+            }
+            
+            product = products.find(p => p.id === productId);
+
+            if (!product) {
+                showErrorState();
+                return;
+            }
+
+            renderProduct();
+        }
+
+        // Add Sample Products
+        function addSampleProducts() {
+            const sampleProducts = [
+                {
+                    id: 1,
+                    name: "boAt Rockerz 450 Pro Bluetooth Wireless Headphone",
+                    description: "Premium wireless headphones with 70 hours playback",
+                    category: "Electronics",
+                    brand: "BoAt",
+                    sellingPrice: 1299,
+                    mrpPrice: 3990,
+                    discount: 67,
+                    stock: 50,
+                    lowStockAlert: 10,
+                    freeDeliveryAbove: 500,
+                    images: [
+                        'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop',
+                        'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop',
+                        'https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=400&h=400&fit=crop'
+                    ],
+                    specifications: { "Connectivity": "Bluetooth 5.0", "Playtime": "70 Hours", "Warranty": "1 Year", "Color": "Blue" },
+                    rating: 4.3,
+                    reviews: 1245,
+                    createdAt: new Date().toISOString()
+                },
+                {
+                    id: 2,
+                    name: "Nike Air Max 270 Running Shoes",
+                    description: "Comfortable running shoes with air cushioning",
+                    category: "Fashion",
+                    brand: "Nike",
+                    sellingPrice: 8999,
+                    mrpPrice: 12999,
+                    discount: 31,
+                    stock: 25,
+                    lowStockAlert: 10,
+                    freeDeliveryAbove: 500,
+                    images: ['https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=400&h=400&fit=crop'],
+                    specifications: { "Material": "Synthetic", "Sole": "Rubber", "Size": "7-11" },
+                    rating: 4.5,
+                    reviews: 856,
+                    createdAt: new Date().toISOString()
+                }
+            ];
+            
+            localStorage.setItem('products', JSON.stringify(sampleProducts));
+            return sampleProducts;
+        }
+
+        // Show Error State
+        function showErrorState() {
+            document.getElementById('productContainer').innerHTML = `
+                <div class="error-state">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <h2>Product Not Found</h2>
+                    <p>The product you're looking for doesn't exist or has been removed.</p>
+                    <a href="products.html" class="btn-go-back">
+                        <i class="fas fa-arrow-left"></i> Go to Products
+                    </a>
+                </div>
+            `;
+        }
+
+        // Render Product
+        function renderProduct() {
+            const container = document.getElementById('productContainer');
+            
+            // Update breadcrumb
+            document.getElementById('categoryLink').textContent = product.category;
+            document.getElementById('categoryLink').href = 'products.html?category=' + product.category;
+
+            const images = product.images && product.images.length > 0 ? 
+                product.images : ['https://via.placeholder.com/400?text=No+Image'];
+
+            let stockStatus = '';
+            let stockClass = '';
+            if (product.stock === 0) {
+                stockStatus = 'Out of Stock';
+                stockClass = 'out';
+            } else if (product.stock <= product.lowStockAlert) {
+                stockStatus = `Only ${product.stock} left`;
+                stockClass = 'low';
+            } else {
+                stockStatus = 'In Stock';
+                stockClass = '';
+            }
+
+            // Build specifications table
+            let specsHtml = '';
+            if (product.specifications) {
+                Object.entries(product.specifications).forEach(([key, value]) => {
+                    specsHtml += `
+                        <tr>
+                            <td>${key}</td>
+                            <td>${value}</td>
+                        </tr>
+                    `;
+                });
+            }
+
+            container.innerHTML = `
+                <div class="product-section">
+                    <!-- Left - Images -->
+                    <div class="product-images">
+                        <div class="main-image-container">
+                            <img src="${images[0]}" alt="${product.name}" class="main-image" id="mainImage"
+                                onerror="this.src='https://via.placeholder.com/400?text=No+Image'">
+                            
+                            <div class="product-badges">
+                                <span class="badge assured">Assured</span>
+                            </div>
+                            
+                            <button class="wishlist-btn" id="wishlistBtn" onclick="toggleWishlist()">
+                                <i class="far fa-heart"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="thumbnail-list" id="thumbnailList">
+                            ${images.map((img, index) => `
+                                <div class="thumbnail ${index === 0 ? 'active' : ''}" onclick="changeImage(${index})">
+                                    <img src="${img}" alt="Thumbnail ${index + 1}" 
+                                        onerror="this.src='https://via.placeholder.com/60?text=No+Image'">
+                                </div>
+                            `).join('')}
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <button class="btn-add-cart" id="addToCart" onclick="addToCart()">
+                                <i class="fas fa-shopping-cart"></i> ADD TO CART
+                            </button>
+                            <button class="btn-buy-now" onclick="buyNow()">
+                                <i class="fas fa-bolt"></i> BUY NOW
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Right - Details -->
+                    <div class="product-details">
+                        <a href="#" class="product-category">${product.category} > ${product.brand || 'Products'}</a>
+                        <h1 class="product-title">${product.name}</h1>
+                        
+                        <div class="rating-section">
+                            <div class="rating-badge">
+                                ${product.rating || '0'} <i class="fas fa-star"></i>
+                            </div>
+                            <span class="rating-count">${product.reviews || '0'} Ratings & Reviews</span>
+                        </div>
+
+                        <div class="price-section">
+                            <div class="price-row">
+                                <span class="current-price">₹${product.sellingPrice.toLocaleString()}</span>
+                                <span class="original-price">₹${product.mrpPrice.toLocaleString()}</span>
+                                <span class="discount-percent">${product.discount}% off</span>
+                            </div>
+                            ${product.bankOffer ? `
+                                <div class="coupon-badge">
+                                    <i class="fas fa-tag"></i>
+                                    ${product.bankOffer}
+                                </div>
+                            ` : ''}
+                        </div>
+
+                        <div class="available-offers">
+                            <h3 class="offers-title">Available Offers</h3>
+                            <div class="offer-list">
+                                <div class="offer-item">
+                                    <i class="fas fa-tag offer-icon"></i>
+                                    <span>Bank Offer: Get ₹200 instant discount on HDFC Bank Credit Cards</span>
+                                </div>
+                                <div class="offer-item">
+                                    <i class="fas fa-tag offer-icon"></i>
+                                    <span>No Cost EMI: Starting from ₹216/month</span>
+                                </div>
+                                <div class="offer-item">
+                                    <i class="fas fa-tag offer-icon"></i>
+                                    <span>Partner Offer: Buy 2 Get 10% off</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="delivery-section">
+                            <div class="delivery-row">
+                                <i class="fas fa-truck delivery-icon"></i>
+                                <span class="delivery-text">Delivery by <span class="delivery-highlight">Tomorrow, Sat, Feb 15</span></span>
+                            </div>
+                            <div class="delivery-row">
+                                <i class="fas fa-shopping-bag delivery-icon" style="background: #26a541;"></i>
+                                <span class="delivery-text">Free delivery by Flipkart</span>
+                            </div>
+                            <div class="pincode-section">
+                                <input type="text" class="pincode-input" placeholder="Enter Pincode" id="pincodeInput">
+                                <button class="pincode-check-btn" onclick="checkPincode()">Check</button>
+                            </div>
+                        </div>
+
+                        <div class="stock-section">
+                            <div class="stock-status">
+                                <span class="stock-dot ${stockClass}"></span>
+                                <span class="stock-text">${stockStatus}</span>
+                            </div>
+                            <span class="stock-quantity">${product.stock > 0 ? `(${product.stock} units available)` : ''}</span>
+                        </div>
+
+                        <div class="seller-section">
+                            <span>Sold by: </span>
+                            <span class="seller-name">Thunderstorm Distribution</span>
+                            <span class="seller-rating">4.5 ★</span>
+                        </div>
+
+                        <div class="highlights-section">
+                            <h3 class="highlights-title">Product Highlights</h3>
+                            <div class="highlights-list">
+                                ${images.length > 0 ? '<span class="highlight-item"><i class="fas fa-circle"></i> Image Available</span>' : ''}
+                                <span class="highlight-item"><i class="fas fa-circle"></i> ${product.category}</span>
+                                <span class="highlight-item"><i class="fas fa-circle"></i> ${product.brand || 'Brand'}</span>
+                                <span class="highlight-item"><i class="fas fa-circle"></i> 7 Days Replacement</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            // Add description to bottom
+            if (product.description) {
+                container.innerHTML += `
+                    <div class="product-info-bottom">
+                        <div class="info-tabs">
+                            <button class="info-tab active">Specification</button>
+                            <button class="info-tab">Description</button>
+                        </div>
+                        <table class="specs-table">
+                            ${specsHtml}
+                        </table>
+                    </div>
+                `;
+            }
+
+            currentImageIndex = 0;
+        }
+
+        // Change Image
+        function changeImage(index) {
+            currentImageIndex = index;
+            const images = product.images || [];
+            document.getElementById('mainImage').src = images[index];
+            
+            document.querySelectorAll('.thumbnail').forEach((thumb, i) => {
+                thumb.classList.toggle('active', i === index);
+            });
+        }
+
+        // Toggle Wishlist
+        function toggleWishlist() {
+            const btn = document.getElementById('wishlistBtn');
+            btn.classList.toggle('active');
+            const icon = btn.querySelector('i');
+            icon.classList.toggle('far');
+            icon.classList.toggle('fas');
+            
+            showToast(btn.classList.contains('active') ? 'Added to Wishlist!' : 'Removed from Wishlist!', !btn.classList.contains('active'));
+        }
+
+        // Add to Cart
+        function addToCart() {
+            if (product.stock <= 0) {
+                showToast('Product is out of stock!', true);
+                return;
+            }
+
+            cart.push(product);
+            localStorage.setItem('cart', JSON.stringify(cart));
+            updateCartCount();
+            showToast('Item added to cart!', false);
+        }
+
+        // Buy Now
+        function buyNow() {
+            if (product.stock <= 0) {
+                showToast('Product is out of stock!', true);
+                return;
+            }
+            showToast('Proceeding to checkout...', false);
+        }
+
+        // Update Cart Count
+        function updateCartCount() {
+            document.getElementById('cartCount').textContent = cart.length;
+        }
+
+        // Check Pincode
+        function checkPincode() {
+            const pincode = document.getElementById('pincodeInput').value;
+            if (pincode.length === 6 && !isNaN(pincode)) {
+                showToast('Delivery available in your area!');
+            } else {
+                showToast('Please enter a valid 6-digit pincode', true);
+            }
+        }
+
+        // Search
+        document.getElementById('searchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                window.location.href = 'products.html?search=' + this.value;
+            }
+        });
+
+        // Toast
+        function showToast(message, isError = false) {
+            const toast = document.getElementById('toast');
+            document.getElementById('toastMessage').textContent = message;
+            toast.classList.toggle('success', !isError);
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+    </script>
+</body>
+</html>
+
